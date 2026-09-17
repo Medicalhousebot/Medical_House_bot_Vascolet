@@ -1,0 +1,1828 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>درسنامه جامع بیماری‌های واسکولیت (Vasculitides) - روماتولوژی دکتر راویا</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700;800&display=swap');
+
+    :root {
+      --primary:    #1a237e;
+      --secondary:  #283593;
+      --accent1:    #0277bd;
+      --accent2:    #00838f;
+      --accent3:    #6a1b9a;
+      --accent4:    #ad1457;
+      --accent5:    #e65100;
+      --bg:         #f0f4ff;
+      --card:       #ffffff;
+      --text:       #1a1a2e;
+      --muted:      #546e7a;
+      --border:     #c5cae9;
+      --green:      #1b5e20;
+      --greenlight: #e8f5e9;
+      --redlight:   #ffebee;
+      --red:        #b71c1c;
+      --yellowlight:#fff8e1;
+      --yellow:     #f57f17;
+      --bluelight:  #e3f2fd;
+      --blue:       #0d47a1;
+      --purplelight:#f3e5f5;
+      --purple:     #4a148c;
+      --teallight:  #e0f7fa;
+      --teal:       #006064;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Vazirmatn', Tahoma, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.9;
+      font-size: 15px;
+      padding-bottom: 90px;
+    }
+
+    /* ===== COVER ===== */
+    .cover {
+      background: linear-gradient(135deg, #1a237e 0%, #283593 40%, #0277bd 100%);
+      color: white;
+      text-align: center;
+      padding: 60px 30px 50px;
+      position: relative;
+      overflow: hidden;
+    }
+    .cover::before {
+      content: '';
+      position: absolute;
+      top: -80px; left: -80px;
+      width: 300px; height: 300px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 50%;
+    }
+    .cover::after {
+      content: '';
+      position: absolute;
+      bottom: -60px; right: -60px;
+      width: 250px; height: 250px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 50%;
+    }
+    .cover .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 50px;
+      padding: 6px 20px;
+      font-size: 13px;
+      letter-spacing: 1px;
+      margin-bottom: 18px;
+    }
+    .cover h1 {
+      font-size: 2.3em;
+      font-weight: 800;
+      margin-bottom: 10px;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+    .cover h2 {
+      font-size: 1.25em;
+      font-weight: 400;
+      opacity: 0.92;
+      margin-bottom: 30px;
+    }
+    .cover .meta {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .cover .meta-item {
+      background: rgba(255,255,255,0.12);
+      border-radius: 12px;
+      padding: 10px 20px;
+      font-size: 13px;
+    }
+    .cover .meta-item span { display: block; font-weight: 700; font-size: 15px; margin-top: 3px; }
+
+    /* ===== TOC ===== */
+    .toc {
+      background: white;
+      margin: 30px auto;
+      max-width: 960px;
+      border-radius: 16px;
+      padding: 30px 35px;
+      box-shadow: 0 4px 20px rgba(26,35,126,0.08);
+      border-right: 5px solid var(--primary);
+    }
+    .toc h3 {
+      font-size: 1.25em;
+      color: var(--primary);
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .toc ol {
+      padding-right: 25px;
+    }
+    .toc ol li {
+      padding: 6px 0;
+      color: var(--accent1);
+      font-weight: 600;
+      font-size: 14.5px;
+    }
+    .toc ol li a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .toc ol li a:hover { color: var(--primary); text-decoration: underline; }
+
+    /* ===== MAIN WRAPPER ===== */
+    .main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 20px 60px;
+    }
+
+    /* ===== SECTION HEADER ===== */
+    .section-header {
+      border-radius: 14px;
+      padding: 18px 25px;
+      margin: 40px 0 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: white;
+      font-size: 1.25em;
+      font-weight: 700;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+    }
+    .section-header .icon {
+      font-size: 1.5em;
+      background: rgba(255,255,255,0.2);
+      border-radius: 50%;
+      width: 44px; height: 44px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .sh-blue   { background: linear-gradient(135deg, #1565c0, #0288d1); }
+    .sh-purple { background: linear-gradient(135deg, #6a1b9a, #ab47bc); }
+    .sh-teal   { background: linear-gradient(135deg, #00695c, #26a69a); }
+    .sh-red    { background: linear-gradient(135deg, #b71c1c, #ef5350); }
+    .sh-orange { background: linear-gradient(135deg, #e65100, #ff7043); }
+    .sh-green  { background: linear-gradient(135deg, #1b5e20, #43a047); }
+    .sh-indigo { background: linear-gradient(135deg, #283593, #5c6bc0); }
+    .sh-pink   { background: linear-gradient(135deg, #880e4f, #e91e63); }
+    .sh-brown  { background: linear-gradient(135deg, #4e342e, #8d6e63); }
+    .sh-cyan   { background: linear-gradient(135deg, #006064, #00acc1); }
+
+    /* ===== SUBSECTION ===== */
+    .subsection {
+      background: white;
+      border-radius: 12px;
+      padding: 22px 25px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      border-top: 3px solid transparent;
+    }
+    .sub-blue   { border-top-color: #1565c0; }
+    .sub-purple { border-top-color: #6a1b9a; }
+    .sub-teal   { border-top-color: #00695c; }
+    .sub-red    { border-top-color: #b71c1c; }
+    .sub-orange { border-top-color: #e65100; }
+    .sub-green  { border-top-color: #1b5e20; }
+    .sub-indigo { border-top-color: #283593; }
+    .sub-pink   { border-top-color: #880e4f; }
+    .sub-brown  { border-top-color: #4e342e; }
+    .sub-cyan   { border-top-color: #006064; }
+
+    .subsection h4 {
+      font-size: 1.1em;
+      font-weight: 700;
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 2px dashed var(--border);
+      color: var(--secondary);
+    }
+
+    /* ===== INFO BOX ===== */
+    .infobox {
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin: 14px 0;
+      display: flex;
+      gap: 12px;
+      font-size: 14px;
+    }
+    .infobox .ib-icon { font-size: 1.3em; flex-shrink: 0; margin-top: 1px; }
+    .ib-blue   { background: var(--bluelight);   border-right: 4px solid #1565c0; color: #0d1b5e; }
+    .ib-green  { background: var(--greenlight);  border-right: 4px solid #2e7d32; color: #1b3a1f; }
+    .ib-red    { background: var(--redlight);    border-right: 4px solid #c62828; color: #5c0000; }
+    .ib-yellow { background: var(--yellowlight); border-right: 4px solid #f9a825; color: #4a2c00; }
+    .ib-purple { background: var(--purplelight); border-right: 4px solid #6a1b9a; color: #2d0048; }
+    .ib-teal   { background: var(--teallight);   border-right: 4px solid #006064; color: #003033; }
+
+    /* ===== LIST STYLES (SAFARI FIX) ===== */
+    .list-styled {
+      list-style: none;
+      padding: 0;
+      margin: 8px 0;
+    }
+    .list-styled li {
+      padding: 6px 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 14.5px;
+      border-bottom: 1px dotted #e8eaf6;
+    }
+    .list-styled li:last-child { border-bottom: none; }
+    .list-styled li::before {
+      content: '◈';
+      color: var(--accent1);
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+    .list-styled.green li::before  { color: #2e7d32; }
+    .list-styled.red li::before    { color: #c62828; }
+    .list-styled.purple li::before { color: #6a1b9a; }
+    .list-styled.teal li::before   { color: #006064; }
+    .list-styled.orange li::before { color: #e65100; }
+
+    .li-content {
+      flex: 1;
+      display: inline;
+      line-height: 1.8;
+      color: var(--text);
+    }
+
+    /* ===== KEY-VALUE ROW (SAFARI FIX) ===== */
+    .kv-row {
+      padding: 8px 0;
+      font-size: 14px;
+      border-bottom: 1px dotted #e0e4f8;
+      line-height: 1.8;
+    }
+    .kv-row:last-child { border-bottom: none; }
+    .kv-key {
+      font-weight: 700;
+      color: var(--secondary);
+      display: inline;
+      margin-left: 6px;
+    }
+    .kv-value {
+      color: var(--text);
+      display: inline;
+    }
+
+    /* ===== TAGS / PILLS ===== */
+    .tag {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      margin: 2px 2px;
+    }
+    .tag-blue   { background: #e3f2fd; color: #0d47a1; }
+    .tag-red    { background: #ffebee; color: #b71c1c; }
+    .tag-green  { background: #e8f5e9; color: #1b5e20; }
+    .tag-purple { background: #f3e5f5; color: #4a148c; }
+    .tag-orange { background: #fff3e0; color: #e65100; }
+    .tag-teal   { background: #e0f7fa; color: #006064; }
+    .tag-yellow { background: #fff8e1; color: #f57f17; }
+    .tag-pink   { background: #fce4ec; color: #880e4f; }
+
+    /* ===== TABLE ===== */
+    .table-wrap { overflow-x: auto; margin: 16px 0; border-radius: 10px; border: 1px solid var(--border); }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+    }
+    table thead tr {
+      background: var(--primary);
+      color: white;
+    }
+    table thead th {
+      padding: 12px 14px;
+      text-align: right;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    table tbody tr:nth-child(even) { background: #f5f7ff; }
+    table tbody tr:hover { background: #e8eaf6; }
+    table tbody td {
+      padding: 10px 14px;
+      border-bottom: 1px solid #e0e4f8;
+      vertical-align: top;
+      line-height: 1.7;
+    }
+    table tbody tr:last-child td { border-bottom: none; }
+
+    /* ===== GRID 2-COL ===== */
+    .grid2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 14px 0;
+    }
+    @media(max-width:640px){ .grid2 { grid-template-columns: 1fr; } }
+
+    /* ===== MINI CARD ===== */
+    .mini-card {
+      border-radius: 10px;
+      padding: 14px 16px;
+      font-size: 13.5px;
+      line-height: 1.7;
+    }
+    .mc-blue   { background: #e8eaf6; border-right: 4px solid #3949ab; }
+    .mc-green  { background: #e8f5e9; border-right: 4px solid #388e3c; }
+    .mc-red    { background: #ffebee; border-right: 4px solid #e53935; }
+    .mc-purple { background: #f3e5f5; border-right: 4px solid #8e24aa; }
+    .mc-orange { background: #fff3e0; border-right: 4px solid #f4511e; }
+    .mc-teal   { background: #e0f7fa; border-right: 4px solid #00838f; }
+    .mc-brown  { background: #efebe9; border-right: 4px solid #5d4037; }
+    .mc-cyan   { background: #e0f7fa; border-right: 4px solid #00838f; }
+    .mini-card h5 { font-weight: 700; margin-bottom: 8px; font-size: 14.5px; }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background: var(--primary);
+      color: rgba(255,255,255,0.85);
+      text-align: center;
+      padding: 25px;
+      font-size: 13px;
+      margin-top: 60px;
+      border-radius: 12px;
+    }
+
+    strong.em  { color: #b71c1c; }
+    strong.em2 { color: #1565c0; }
+    strong.em3 { color: #2e7d32; }
+    strong.em4 { color: #6a1b9a; }
+
+    /* ===== سیستم تعاملی یادداشت‌های درون‌متنی مینیاتوری ===== */
+    .note-marker {
+      background-color: #ffd54f !important;
+      border: 1px solid #ffb300 !important;
+      color: #000 !important;
+      border-radius: 4px !important;
+      cursor: pointer !important;
+      padding: 1px 4px !important;
+      margin: 0 3px !important;
+      font-size: 11px !important;
+      user-select: none !important;
+      display: inline-block !important;
+      vertical-align: middle !important;
+      font-weight: bold !important;
+      position: relative;
+      animation: notePulse 2s infinite;
+    }
+    @keyframes notePulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.15); }
+      100% { transform: scale(1); }
+    }
+
+    /* کدهای CSS خالص جهت سازگاری و نمایش یادداشت در نمایشگر فایل آفلاین iOS */
+    .note-tooltip {
+      display: none;
+      position: absolute;
+      bottom: 125%;
+      right: 0;
+      background: #37474f;
+      color: #ffffff;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 12px;
+      min-width: 180px;
+      max-width: 250px;
+      z-index: 1000;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+      white-space: normal;
+      line-height: 1.5;
+      font-weight: normal;
+      text-align: right;
+    }
+    .note-marker:hover .note-tooltip, .note-marker:active .note-tooltip {
+      display: block !important;
+    }
+
+    /* ===== ساختار پنجره مودال مدیریت یادداشت‌ها ===== */
+    .modal-overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(26, 35, 126, 0.5);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 10000;
+      direction: rtl;
+    }
+    .modal-card {
+      background: white;
+      border-radius: 16px;
+      padding: 24px;
+      width: 90%;
+      max-width: 500px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+      border-top: 5px solid var(--primary);
+    }
+    .modal-card h4 {
+      margin-bottom: 14px;
+      color: var(--primary);
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .modal-textarea {
+      width: 100%;
+      height: 120px;
+      padding: 10px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-family: inherit;
+      resize: none;
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+    .modal-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+    .btn {
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-family: inherit;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+      font-size: 13px;
+    }
+    .btn-primary { background: var(--primary); color: white; }
+    .btn-danger { background: var(--red); color: white; }
+    .btn-secondary { background: #eceff1; color: #37474f; }
+
+    /* ===== نوار ابزار تعاملی انتهای صفحه ===== */
+    #highlight-panel {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: white;
+      box-shadow: 0 10px 35px rgba(0,0,0,0.2);
+      border-radius: 50px;
+      padding: 10px 20px;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border: 2px solid var(--primary);
+      direction: rtl;
+      width: max-content;
+      max-width: 95%;
+    }
+    #highlight-panel span {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .hl-btn {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      border: 1px solid rgba(0,0,0,0.2);
+      cursor: pointer;
+      transition: transform 0.1s;
+    }
+    .hl-btn:hover { transform: scale(1.15); }
+    .hl-btn-yellow { background-color: #fff59d; }
+    .hl-btn-green  { background-color: #c8e6c9; }
+    .hl-btn-blue   { background-color: #bbdefb; }
+    .hl-btn-pink   { background-color: #f8bbd0; }
+    .panel-action-btn {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: bold;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    .panel-action-btn-red { background: var(--red); }
+  </style>
+</head>
+<body>
+
+<!-- ===================== COVER ===================== -->
+<div class="cover">
+  <div class="badge">درسنامه تعاملی روماتولوژی بالینی</div>
+  <h1>جامع‌ترین مرجع بیماری‌های واسکولیت (Vasculitides)</h1>
+  <h2>پاتوفیزیولوژی، ارگان‌های هدف، کرایتریای تشخیصی، پروتکل‌های درمانی و نکات امتحانی</h2>
+  <div class="meta">
+    <div class="meta-item">مدرس ارجمند: <span>دکتر اولیا </span></div>
+    <div class="meta-item">نویسنده: <span>احمدرضا عبداللهی پور</span></div>
+    <div class="meta-item">برای دریافت فایل های بیشتر به بات تلگرامی مراجعه کنید
+                        
+<a href="https://t.me/Medical_house_bot" target="_blank" style="
+    display: inline-block;
+    padding: 5px 12px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: Tahoma, sans-serif;
+    font-weight: bold;">
+    🤖 شروع گفتگو با بات
+</a></div>
+  </div>
+</div>
+
+<!-- ===================== TOC ===================== -->
+<div class="toc">
+  <h3>📋 فهرست تفصیلی سرفصل‌های درسنامه</h3>
+  <ol>
+    <li><a href="#sec-1">مفاهیم پایه، تعریف پاتوفیزیولوژیک و هویت التهاب در روماتولوژی</a></li>
+    <li><a href="#sec-2">طبقه‌بندی بین‌المللی واسکولیت‌ها (CHCC 2012) و علل اولیه و ثانویه</a></li>
+    <li><a href="#sec-3">سه‌گانه مکانیسم‌های اصلی آسیب عروقی (Pathogenesis & Immunopathology)</a></li>
+    <li><a href="#sec-4">رویکرد بالینی و پاراکلینیکی به تشخیص واسکولیت‌ها</a></li>
+    <li><a href="#sec-5">واسکولیت عروق بزرگ ۱: آرتریت تمپورال (Giant Cell Arteritis - GCA)</a></li>
+    <li><a href="#sec-6">پلی‌میالژیا روماتیکا (PMR) و پیوند بالینی آن با GCA</a></li>
+    <li><a href="#sec-7">واسکولیت عروق بزرگ ۲: آرتریت تاکایاسو (Takayasu Arteritis - Pulseless Disease)</a></li>
+    <li><a href="#sec-8">واسکولیت عروق متوسط: پلی‌آرتریت ندوزا (PAN) و بیماری کاوازاکی (KD)</a></li>
+    <li><a href="#sec-9">واسکولیت‌های عروق کوچک وابسته به ANCA (AAV): گرانولوماتوز با پلی‌آنژئیت (GPA / وگنر)</a></li>
+    <li><a href="#sec-10">گرانولوماتوز ائوزینوفیلیک با پلی‌آنژئیت (EGPA / سندرم چرگ اشتراوس)</a></li>
+    <li><a href="#sec-11">پلی‌آنژئیت میکروسکوپیک (Microscopic Polyangiitis - MPA)</a></li>
+    <li><a href="#sec-12">واسکولیت‌های با واسطه کمپلکس ایمنی: کرایوگلوبولینمی و پورپورای هنوخ شوئن‌لاین (HSP / IgAV)</a></li>
+    <li><a href="#sec-13">واسکولیت‌های متغیر و تک‌اندامی: واسکولیت ایزوله CNS، پوست و سندرم بهجت</a></li>
+    <li><a href="#sec-14">مقلدهای واسکولیت (Pseudovasculitides) و پدیده‌های انسدادی غیرالتهابی</a></li>
+    <li><a href="#sec-15">جدول مقایسه‌ای جامع دارودرمانی، پایش‌ها و هشدارهای حیات‌بخش</a></li>
+  </ol>
+</div>
+
+<!-- ===================== MAIN CONTENT ===================== -->
+<div class="main">
+
+  <!-- SECTION 1 -->
+  <div class="section-header sh-blue" id="sec-1">
+    <div class="icon">🔬</div>
+    <div>۱. مفاهیم پایه، تعریف پاتوفیزیولوژیک و هویت التهاب در روماتولوژی</div>
+  </div>
+
+  <div class="subsection sub-blue">
+    <h4>مفهوم بنیادین التهاب (Inflammation) و آسیب ایمنی</h4>
+    <p>
+      در علم آسیب‌شناسی، <strong>التهاب (Inflammation)</strong> به‌صورت پاسخ زیستی بافتی به هرگونه محرک آسیب‌رسان تعریف می‌شود:
+      <span class="tag tag-blue">Inflammation: Tissue response to injury</span>.
+      بنابراین، الزاماً در هر التهابی حضور لکوسیت‌های مهاجم یا عفونت شرط نیست و هر واکنش بافتی (حتی تغییر شکل ساختاری و فیبروز در پی تروما یا محرک بیوشیمیایی) مصداق التهاب تلقی می‌گردد.
+    </p>
+    <div class="infobox ib-blue">
+      <span class="ib-icon">💡</span>
+      <div>
+        <strong>دیدگاه روماتولوژی:</strong> در بیماری‌های روماتولوژی، مشکل اصلی و محوری بیماران عبارت است از <strong>التهاب افسارگسیخته</strong> ناشی از اختلال در «مکانیسم خاموش‌سازی» سیستم ایمنی (<span class="tag tag-red">Impaired Off-Switch Mechanism</span>). نتیجه نهایی این نقص تنظیمی، آسیب ارگانی با واسطه ایمنی (<span class="tag tag-purple">Immune-mediated organ damage</span>) در اندام‌های هدف است.
+      </div>
+    </div>
+    
+    <div class="grid2">
+      <div class="mini-card mc-blue">
+        <h5>🎯 ارگان هدف در بیماری‌های مختلف روماتولوژی</h5>
+        <div class="kv-row"><span class="kv-key">پلی‌میوزیت و درماتومیوزیت:</span><span class="kv-value">عضلات مخطط اسکلتی</span></div>
+        <div class="kv-row"><span class="kv-key">اسکلرودرمی (SSc):</span><span class="kv-value">پوست، میکروواسکولار و فیبروز پارانشیم ریه</span></div>
+        <div class="kv-row"><span class="kv-key">آرتریت روماتوئید (RA):</span><span class="kv-value">غشای سینوویال مفاصل، ندول‌ها و درگیری بینابینی کلیه/ریه</span></div>
+        <div class="kv-row"><span class="kv-key">واسکولیت‌ها (Vasculitis):</span><span class="kv-value">جدار رگ‌های خونی (بزرگ، متوسط و کوچک)</span></div>
+      </div>
+      <div class="mini-card mc-purple">
+        <h5>⚠️ اهمیت راهبردی عروق در حیات بافتی</h5>
+        <p>
+          عروق خونی «شاهراه‌های حیاتی» هر ارگان در بدن هستند. هرچه این شاهراه‌ها <strong>پروگزیمال‌تر، مرکزی‌تر و بزرگ‌تر</strong> باشند، بروز التهاب در آن‌ها آسیب‌های گسترده‌تر، انفارکتوس‌های وسیع‌تر و تهدید حیات فوری‌تری ایجاد خواهد کرد.
+        </p>
+      </div>
+    </div>
+
+    <h4>تعریف جامع بالینی و پاتولوژیک واسکولیت (Vasculitis)</h4>
+    <p>
+      هرگاه به هر علتی (ایمونولوژیک، عفونی یا توکسیک)، <strong>تمام لایه‌های ساختاری جدار یک رگ خونی</strong> (اینتیما، مدیا و ادونتیس) دچار التهاب حاد یا مزمن شوند، به‌طوری‌که یکپارچگی ساختاری و قوام آن (<span class="tag tag-yellow">Structural Integrity</span>) مختل شود، منجر به تورم جدار، التهاب تمام‌ضخامت (<span class="tag tag-red">Panmural Inflammation</span>)، تنگی یا انسداد لومن و در نتیجه نکروز فیبرینوئید و توقف کامل خونرسانی گردد، به آن <strong>واسکولیت سیستمیک نکروزان</strong> می‌گویند.
+    </p>
+
+    <ul class="list-styled red">
+      <li><span class="li-content"><strong>التهاب نکروزان عروق:</strong> در تمامی واسکولیت‌ها یک التهاب نکروزان زمینه‌ای وجود دارد که از مویرگ‌های میکروسکوپی تا آئورت و شاخه‌های ماژور آن را درگیر می‌سازد.</span></li>
+      <li><span class="li-content"><strong>ایسکمی، انفارکتوس و گانگرن:</strong> انسداد کامل مجرای شریان باعث هیپوکسی مطلق و گانگرن در اعضای حیاتی (مغز، چشم، روده‌ها، کلیه‌ها و اندام‌ها) می‌شود.</span></li>
+      <li><span class="li-content"><strong>درگیری تک‌ارگان (Single Organ Vasculitis):</strong> بیماری می‌تواند صرفاً یک بافت را مبتلا سازد (نظیر <em>Isolated Cutaneous Vasculitis</em> که منحصراً در پوست مانده و سیستمیک نمی‌شود).</span></li>
+      <li><span class="li-content"><strong>درگیری چندارگانی (Multiple Organ Failure - MOF):</strong> فرم تیپیک واسکولیت‌های سیستمیک، درگیری همزمان چندین دستگاه بدن است که در صورت تأخیر در مداخله دارویی، نارسایی حاد چندین عضو و مرگ را به دنبال خواهد داشت.</span></li>
+      <li><span class="li-content"><strong>پدیده هم‌پوشانی (Overlap Syndrome):</strong> واسکولیت‌ها از هتروژن‌ترین بیماری‌های طب داخلی هستند و به دلیل اورلپ وسیع میان علائم بالینی و اتوآنتی‌بادی‌ها، تفکیک قطعی آن‌ها همواره چالشی تشخیصی است.</span></li>
+    </ul>
+  </div>
+
+  <!-- SECTION 2 -->
+  <div class="section-header sh-indigo" id="sec-2">
+    <div class="icon">📑</div>
+    <div>۲. طبقه‌بندی بین‌المللی واسکولیت‌ها (CHCC 2012) و علل اولیه و ثانویه</div>
+  </div>
+
+  <div class="subsection sub-indigo">
+    <h4>تقسیم‌بندی بر اساس علل اتولوژیک: اولیه در برابر ثانویه</h4>
+    <div class="grid2">
+      <div class="mini-card mc-blue">
+        <h5>۱. واسکولیت‌های اولیه (Primary Vasculitides)</h5>
+        <p>
+          هیچ علت زمینه‌ای شناخته‌شده مشخصی (از جمله ضربه، ترومای عروقی، سموم، عفونت باکتریایی/ویروسی، اختلال متابولیک یا بدخیمی) وجود ندارد؛ بیماری خودبه‌خود و با ماهیت <strong>ایدیوپاتیک و خودایمنی</strong> آغاز می‌گردد.
+        </p>
+      </div>
+      <div class="mini-card mc-red">
+        <h5>۲. واسکولیت‌های ثانویه (Secondary Vasculitides)</h5>
+        <p>التهاب عروق در نتیجه یک فرآیند پاتولوژیک مشخص زمینه‌ای ایجاد می‌شود که شامل ۵ دسته اصلی است:</p>
+        <div class="kv-row"><span class="kv-key">۱. عوامل عفونی:</span><span class="kv-value">اندوکاردیت عفونی (Infective Endocarditis)، هپاتیت B و C، ویروس HIV، سیفلیس</span></div>
+        <div class="kv-row"><span class="kv-key">۲. عوامل متابولیک:</span><span class="kv-value">اختلالات شدید بیوشیمیایی و ترومبوفیلی‌های سیستمیک</span></div>
+        <div class="kv-row"><span class="kv-key">۳. بیماری‌های ارتشاحی (Infiltrative):</span><span class="kv-value">ارتشاح و هجوم سلول‌های بدخیم لوسمی/لنفوم به جدار عروق</span></div>
+        <div class="kv-row"><span class="kv-key">۴. بیماری‌های بافت همبند (CTD):</span><span class="kv-value">لوپوس اریتماتوز سیستمیک (SLE)، سندرم شوگرن، آرتریت روماتوئید (RA)</span></div>
+        <div class="kv-row"><span class="kv-key">۵. داروها (Drug-induced):</span><span class="kv-value">شایع‌ترین علت واسکولیت ثانویه داروها هستند؛ به‌ویژه <strong>پروپیل‌تیوراسیل (PTU)</strong> در هایپرتیروئیدی، متامیزول و هیدرالازین که باعث <strong>مثبت شدن تیتر ANCA</strong> می‌شوند!</span></div>
+      </div>
+    </div>
+
+    <h4>نام‌گذاری و طبقه‌بندی کنفرانس چپل هیل ۲۰۱۲ (2012 Chapel Hill Consensus) بر پایه سایز عروق</h4>
+    <p>
+      به علت تنوع فوق‌العاده در تظاهرات، معتبرترین معیار استاندارد طبقه‌بندی واسکولیت‌ها در دنیا، سایز غالب عروق درگیر است:
+    </p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>دسته عروقی</th>
+            <th>عروق هدف آناتومیک</th>
+            <th>بیماری‌های نمونه و مشخصات شاخص</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>واسکولیت عروق بزرگ (LVV)</strong><br><span class="tag tag-blue">Large Vessel Vasculitis</span></td>
+            <td>آئورت و تمام شاخه‌های اصلی تنه، کاروتید، ساب‌کلاوین، تمپورال</td>
+            <td>
+              • <strong>Giant Cell Arteritis (GCA / تمپورال):</strong> سن بالای ۵۰ سال، سردرد جدید، خطر کوری دائم.<br>
+              • <strong>Takayasu Arteritis (TAK):</strong> سن زیر ۵۰ سال (عمدتاً دختران ۲۰-۲۵ سال)، عدم لمس نبض (Pulseless).
+            </td>
+          </tr>
+          <tr>
+            <td><strong>واسکولیت عروق متوسط (MVV)</strong><br><span class="tag tag-purple">Medium Vessel Vasculitis</span></td>
+            <td>شریان‌های عضلانی احشایی اصلی (رنال، مزانتریک، کرونر، هپاتیک)</td>
+            <td>
+              • <strong>Polyarteritis Nodosa (PAN):</strong> میکروآنوریسم، تنگی سگمنتال دوشاخه‌ها، بدون گلومرولونفریت.<br>
+              • <strong>Kawasaki Disease (KD):</strong> واسکولیت نکروزان اطفال، ارجحیت آنوریسم‌های کرونر، درمان با IVIG.
+            </td>
+          </tr>
+          <tr>
+            <td><strong>واسکولیت عروق کوچک با کمپلکس ایمنی</strong><br><span class="tag tag-green">Immune Complex SVV</span></td>
+            <td>کاپیلاری‌ها، ونول‌های پست‌کاپیلری، آرتریول‌ها، پورپورا با رسوب ایمنی</td>
+            <td>
+              • <strong>Henoch-Schönlein Purpura (HSP / IgAV):</strong> رسوب IgA در کودکان، پورپورا، درگیری کلیه و شکم.<br>
+              • <strong>Cryoglobulinemic Vasculitis:</strong> رسوب کرایوگلوبولین در سرما، پیوند بسیار قوی با هپاتیت C.<br>
+              • <strong>Anti-GBM Disease (Goodpasture):</strong> آنتی‌بادی علیه غشای پایه گلومرول و آلوئول.<br>
+              • <strong>Hypocomplementemic Urticarial Vasculitis (HUV):</strong> آنتی‌بادی علیه C1q و کهیر مزمن.
+            </td>
+          </tr>
+          <tr>
+            <td><strong>واسکولیت عروق کوچک وابسته به ANCA (AAV)</strong><br><span class="tag tag-red">ANCA-Associated SVV</span></td>
+            <td>عروق ریز آلوئولار و گلومرولی با رسوب ایمنی ناچیز (Pauci-immune)</td>
+            <td>
+              • <strong>Granulomatosis with Polyangiitis (GPA / وگنر):</strong> گرانولوم، تخریب تنفسی فوقانی/تحتانی، c-ANCA/PR3.<br>
+              • <strong>Microscopic Polyangiitis (MPA):</strong> بدون گرانولوم، نارسایی کلیه برق‌آسا و DAH، p-ANCA/MPO.<br>
+              • <strong>Eosinophilic GPA (EGPA / چرگ اشتراوس):</strong> آسم شدید، ائوزینوفیلی بافتی و خون بالای ۱۵۰۰، درگیری قلبی.
+            </td>
+          </tr>
+          <tr>
+            <td><strong>واسکولیت عروق متغیر (VVV)</strong><br><span class="tag tag-teal">Variable Vessel Vasculitis</span></td>
+            <td>توانایی درگیری هرگونه رگ (شریان و ورید در هر کالیبر)</td>
+            <td>
+              • <strong>سندرم بهجت (Behçet's Disease):</strong> آفت‌های عودکننده دهانی و تناسلی، یووئیت، ترومبوزهای ایزوله وریدی.<br>
+              • <strong>سندرم کوگان (Cogan's Syndrome):</strong> کراتیت بینابینی قرنیه و اختلالات شنوایی-دهلیزی حاد.
+            </td>
+          </tr>
+          <tr>
+            <td><strong>واسکولیت تک‌اندامی (SOV)</strong><br><span class="tag tag-orange">Single-Organ Vasculitis</span></td>
+            <td>محدود به یک ساختار آناتومیک مجزا</td>
+            <td>
+              • <strong>Isolated Cutaneous Vasculitis:</strong> درگیری لکوسیتوکلاستیک منحصر به درم پوست بدون هیچ درگیری احشایی.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- SECTION 3 -->
+  <div class="section-header sh-teal" id="sec-3">
+    <div class="icon">⚙️</div>
+    <div>۳. سه‌گانه مکانیسم‌های اصلی آسیب عروقی (Pathogenesis & Immunopathology)</div>
+  </div>
+
+  <div class="subsection sub-teal">
+    <h4>بررسی ایمونوپاتولوژی ترومبوز و تخریب جدار عروق</h4>
+    <p>
+      آسیب التهابی به دیواره رگ‌ها به طور اساسی از طریق سه مسیر فیزیوپاتولوژیک مستقل رخ می‌دهد:
+    </p>
+
+    <div class="grid2">
+      <div class="mini-card mc-teal">
+        <h5>۱. رسوب کمپلکس‌های ایمنی (Immune Complex Deposition)</h5>
+        <p>
+          اتصال آنتی‌ژن و آنتی‌بادی در گردش خون و گیر افتادن این کمپلکس‌ها در لایه‌های مویرگی و اندوتلیوم رخ می‌دهد که سبب فعال‌سازی آبشار کمپلمان، کموتاکسی نوتروفیل‌ها و تخریب آنزیمی جدار رگ می‌گردد.
+        </p>
+        <div class="kv-row"><span class="kv-key">همراهی PAN با ویروس:</span><span class="kv-value">ارتباط مستقیم هپاتیت B (HBV) با ۱۰ تا ۳۰ درصد بیماران PAN</span></div>
+        <div class="kv-row"><span class="kv-key">همراهی کرایوگلوبولینمی:</span><span class="kv-value">ارتباط بسیار بارز با عفونت مزمن هپاتیت C (HCV)</span></div>
+      </div>
+
+      <div class="mini-card mc-red">
+        <h5>۲. مسیر تخریبی نوتروفیل‌ها با واسطه ANCA</h5>
+        <p>
+          آنتی‌بادی‌های ضد سیتوپلاسم نوتروفیل (ANCA) هم ارزش تشخیصی دارند و هم فاکتور مستقیم بیماری‌زایی هستند:
+        </p>
+        <ul class="list-styled red">
+          <li><span class="li-content">در شرایط عادی، گرانولوسیت‌ها به اندوتلیوم دست‌نخورده نمی‌چسبند.</span></li>
+          <li><span class="li-content">تحریک با ویروس یا دارو سبب تولید ANCA و اتصال آن به سطح لکوسیت‌ها می‌شود.</span></li>
+          <li><span class="li-content">با اتصال Ab، نوتروفیل‌ها فعال شده و مقادیر انبوه نیتریک اکساید (NO)، سایتوکاین‌ها و رادیکال‌های آزاد اکسیژن ترشح می‌کنند.</span></li>
+          <li><span class="li-content">اتصالات اینتگرینی بین سلولی تخریب شده (<span class="tag tag-yellow">Disruption of Integrins</span>)، منافذ اندوتلیال (<span class="tag tag-blue">Fenestrae</span>) باز شده و لکوسیت‌ها جدار رگ را متلاشی کرده و وارد بافت می‌شوند.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mini-card mc-purple" style="margin-top: 15px;">
+      <h5>۳. لنفوسیت‌های T پاتوژنیک و تشکیل گرانولوم (Granuloma Formation)</h5>
+      <p>
+        پاسخ ایمنی با واسطه سلول‌های T کمکی (Th1 و Th17) و ارتشاح ماکروفاژها، سبب ترشح فاکتورهای رشد، ادغام ماکروفاژها و ایجاد سلول‌های غول‌آسا (Giant Cells) و کانون‌های گرانولوماتوز در تمام‌ضخامت عروق می‌گردد. این مکانیسم به‌ویژه در <strong>واسکولیت‌های عروق بزرگ (GCA و تاکایاسو)</strong> و دو واسکولیت نکروزان عروق کوچک شامل <strong>وگنر (GPA) و چرگ اشتراوس (EGPA)</strong> دیده می‌شود.
+      </p>
+    </div>
+
+    <h4>مقایسه بیوشیمیایی و ایمونوفلورسانس: تفاوت ساختاری ANA با ANCA</h4>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>شاخص ارزیابی</th>
+            <th>آنتی‌بادی ضد هسته (ANA)</th>
+            <th>آنتی‌بادی ضد سیتوپلاسم نوتروفیل (ANCA)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>آنتی‌ژن هدف</strong></td>
+            <td>آنتی‌ژن‌های پروتئینی و اسیدهای نوکلئیک داخل هسته سلول‌ها</td>
+            <td>آنتی‌ژن‌های مستقر در گرانول‌های اولیه سیتوپلاسم نوتروفیل‌ها</td>
+          </tr>
+          <tr>
+            <td><strong>بیماری‌های اختصاصی</strong></td>
+            <td>لوپوس (SLE)، اسکلرودرمی، پلی‌میوزیت، MCTD، سندرم شوگرن</td>
+            <td>GPA (وگنر)، MPA، EGPA (چرگ اشتراوس)، واسکولیت‌های دارویی</td>
+          </tr>
+          <tr>
+            <td><strong>الگوی فلورسانس سیتوپلاسمی</strong></td>
+            <td>متمرکز در قلمرو هسته (هسته‌ای، لبه‌ای، منقوط یا هموژن)</td>
+            <td>
+              • <strong>c-ANCA (Cytoplasmic):</strong> درخشندگی منتشر در کل سیتوپلاسم، علیه آنتی‌ژن <strong>پروتئیناز ۳ (PR3)</strong><br>
+              • <strong>p-ANCA (Perinuclear):</strong> درخشندگی فشرده دور غشای هسته، علیه آنتی‌ژن <strong>میلوپراکسیداز (MPO)</strong>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>نکته تخصصی بالینی</strong></td>
+            <td>آنتی‌ژن‌های نزدیک و لبه هسته تشابه بالایی با بیماری‌های associated ANA دارند و اختصاصیت کمتری دارند.</td>
+            <td>در افراد نرمال هیچ‌گونه آنتی‌بادی علیه گرانول‌های سیتوپلاسمی وجود ندارد و تست فلورسانس کاملاً تاریک و منفی است.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- SECTION 4 -->
+  <div class="section-header sh-purple" id="sec-4">
+    <div class="icon">🩺</div>
+    <div>۴. رویکرد بالینی و پاراکلینیکی به تشخیص واسکولیت‌ها</div>
+  </div>
+
+  <div class="subsection sub-purple">
+    <h4>پنج گام اساسی در مواجهه تشخیصی با بیمار مشکوک به واسکولیت</h4>
+    <ol class="list-styled purple">
+      <li><span class="li-content"><strong>یافته‌های بالینی سیستمیک و موضعی:</strong> بروز ایسکمی حاد، نارسایی ارگانی در شرایط تنگی عروقی؛ نظیر جوان غیرمبتلا به دیابت یا دیس‌لیپیدمی که دچار <strong>سکته حاد قلبی (MI)</strong> می‌شود (نشانه انسداد عروق کرونر ناشی از التهاب)، یا فرد جوانی که به دلیل تنگی شریان رنال دچار هایپرتانسیون بدخیم و هماچوری فعال و پروتئینوری می‌گردد.</span></li>
+      <li><span class="li-content"><strong>تست‌های آزمایشگاهی و فاز حاد غیراختصاصی:</strong> افزایش چشمگیر واکنش‌گرهای فاز حاد شامل <strong>ESR بالینی بالا</strong>، <strong>CRP شدیداً مثبت</strong> و سطوح سرمی بالای فریتین. سنجش سایتوکاین‌های التهابی سرمی در پروژه‌های تحقیقاتی انجام می‌شود اما در بالین کاربرد روتین ندارد.</span></li>
+      <li><span class="li-content"><strong>آنژیوگرافی تهاجمی و غیرتهاجمی:</strong> تصویربرداری عروقی نقشی حیاتی در شناسایی تغییرات مورفولوژیک، بی‌نظمی‌های جداره، تشکیل آنوریسم‌ها، دیورسیون، تنگی‌های سگمنتال و انسداد در رگ‌های متوسط و بزرگ ایفا می‌کند و در شرایط خطرناک جانشین بیوپسی می‌شود.</span></li>
+      <li><span class="li-content"><strong>بیوپسی بافتی (استاندارد طلایی / Gold Standard):</strong> تشخیص قطعی واسکولیت همواره بر اساس بیوپسی از بافت درگیر (عضله، عصب، پوست، کلیه یا ریه) و مشاهده ارتشاح لکوسیتی و نکروز فیبرینوئید جدار عروق است؛ هرچند به دلیل خطرات خونریزی یا غیرقابل دسترس بودن ارگان، همیشه مقدور نیست.</span></li>
+      <li><span class="li-content"><strong>تصویربرداری مدرن با پت‌اسکن (FDG-PET Scan):</strong> در مواردی که شک به درگیری التهابی عروق بزرگ (تنه آئورت، شاخه‌های کاروتید یا ساب‌کلاوین) وجود دارد، PET-CT اسکن روش انتخابی و فوق‌العاده حساسی است که التهاب متابولیک فعال جدار رگ را پیش از باریک شدن مجرا نشان می‌دهد (بروز کلودیکاسیون دست [Arm Claudication] ناشی از انسداد ساب‌کلاوین و خستگی سریع بازو حین کار).</span></li>
+    </ol>
+
+    <div class="infobox ib-yellow">
+      <span class="ib-icon">⚠️</span>
+      <div>
+        <strong>نقد تخصصی استاد:</strong> واسکولیت‌ها گاهی تظاهر بالینی آشکار (Clinical) یا علائم آزمایشگاهی واضح ندارند و صرفاً ماهیت پاتولوژیک پنهان دارند. به عنوان نمونه، بیمار آرتریت روماتوئید (RA) ممکن است تیترهای بسیار بالا از Rheumatoid Factor (RF) و Anti-CCP داشته باشد و در بیوپسی عروق بافتی التهاب دیده شود، در حالی که بیمار هنوز علامت ایسکمیک بالینی آشکاری نشان نداده است.
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 5 -->
+  <div class="section-header sh-red" id="sec-5">
+    <div class="icon">🩸</div>
+    <div>۵. واسکولیت عروق بزرگ ۱: آرتریت تمپورال (Giant Cell Arteritis - GCA)</div>
+  </div>
+
+  <div class="subsection sub-red">
+    <h4>همه‌گیرشناسی و معیارهای کلیدی ورود به تشخیصی</h4>
+    <div class="infobox ib-red">
+      <span class="ib-icon">🚨</span>
+      <div>
+        <strong class="em">«قانون طلایی سن ۵۰ سالگی»:</strong> بروز آرتریت تمپورال در افراد زیر ۵۰ سال فوق‌العاده نادر است! <strong>عدد ۵۰ در ارزیابی سردرد روماتولوژی مقدّس است.</strong> بروز هرگونه سردرد با ویژگی‌های جدید در فرد بالای ۵۰ سال، بیمار را در صدر شک به آرتریت سلول ژانت قرار می‌دهد.
+      </div>
+    </div>
+
+    <h4>تظاهرات بالینی آرتریت تمپورال (GCA)</h4>
+    <div class="grid2">
+      <div class="mini-card mc-red">
+        <h5>۱. سردردهای غیرقابل توجیه و جدید</h5>
+        <p>سردرد می‌تواند ضربان‌دار یا مداوم، یک‌طرفه یا دوطرفه، متمرکز در ناحیه فرونتال، تمپورال، پریتال یا اکسیپیتال باشد؛ ویژگی بارز، «بی‌سابقه بودن» آن در زندگی بیمار است.</p>
+        <div class="kv-row"><span class="kv-key">حساسیت پوست سر:</span><span class="kv-value">درد شدید شقیقه‌ها حین شانه زدن مو یا قرار دادن سر روی بالش (Scalp Tenderness)</span></div>
+        <div class="kv-row"><span class="kv-key">بررسی شریان تمپورال:</span><span class="kv-value">شریان برجسته، طنابی‌شکل، گره‌دار و فاقد نبض لمس می‌شود.</span></div>
+      </div>
+      <div class="mini-card mc-orange">
+        <h5>۲. تظاهرات چشمی (اورژانس مطلق پزشکی قانونی!)</h5>
+        <p>درگیری <strong>شریان افتالمیک (Ophthalmic Artery)</strong> و شاخه‌های سیلاری خلفی سبب نوروپاتی قدامی عصب بینایی (AION) می‌گردد.</p>
+        <p>اگر بیمار بالای ۵۰ سال با سردرد، تب مداوم، بی‌اشتهایی و <strong>ESR بالای ۵۰ (یا بالای ۱۰۰)</strong> مراجعه کند، تعلل در درمان کورتیکواستروئیدی موجب <strong>کوری غیرقابل بازگشت</strong> چشم اول و درگیری سریع چشم مقابل ظرف ساعات تا روزهای آینده می‌شود (پزشک مقصر و مسئول است!).</p>
+      </div>
+    </div>
+
+    <div class="grid2">
+      <div class="mini-card mc-purple">
+        <h5>۳. لنگش فک و زبان (Jaw & Tongue Claudication)</h5>
+        <p>
+          ایسکمی شاخه‌های شریان کاروتید خارجی حین جویدن غذاهای سفت (گوشت)، سبب خستگی مفرط، درد و ناتوانی فک (Jaw claudication) می‌گردد که یافته‌ای به شدت اختصاصی است.
+        </p>
+        <div class="kv-row"><span class="kv-key">کلودیکاسیون زبان:</span><span class="kv-value">خستگی و درد شدید زبان حین تکلم یا خوردن؛ درگیری شریان لینگوال حتی به نکروز و گانگرن زبان می‌انجامد.</span></div>
+      </div>
+      <div class="mini-card mc-blue">
+        <h5>۴. علائم سرشتی و ارزیابی آزمایشگاهی</h5>
+        <ul class="list-styled">
+          <li><span class="li-content">تب طول‌کشیده و مجهول‌العلت (FUO)، تعریق شبانه (مشابه سل فعال) و کاهش وزن شدید.</span></li>
+          <li><span class="li-content">آنمی مزمن با ماهیت نورموکروم نورموسیتیک با ماندگاری بالای یک ماه.</span></li>
+          <li><span class="li-content"><strong>ESR بالای ۱۰۰ mm/hr:</strong> بسیار شایع است؛ همراه با افزایش چشمگیر CRP و اینترلوکین ۶ (IL-6).</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="infobox ib-purple">
+      <span class="ib-icon">🔍</span>
+      <div>
+        <strong>تشخیص‌های افتراقی اساسی ESR بالای ۱۰۰:</strong>
+        ۱. بیماری‌های روماتولوژی (در صدر: آرتریت سلول ژانت / تمپورال) • ۲. نئوپلاسم‌ها و بدخیمی‌های متاستاتیک وسیع • ۳. مولتیپل میلوما (Multiple Myeloma) • ۴. عفونت‌های عمقی باکتریایی خاص (نظیر اندوکاردیت، استئومیلیت، سل چرکی).
+      </div>
+    </div>
+
+    <h4>پاتولوژی، شریان‌های درگیر و رویکرد درمانی مدرن</h4>
+    <p>
+      ارتشاح لکوسیت‌های مونونوکلئر و ماکروفاژها در مدیا و انتیما و تولید IL-6 سبب انسداد مجرا می‌شود. در بیوپسی، تجمع <strong>سلول‌های ژانت چند‌هسته‌ای (Giant Cells)</strong> رویت می‌شود. به دلیل پدیده <em>Skip Lesions</em> (درگیری تکه‌ای عروق)، بیوپسی باید با طول حداقل ۲ تا ۳ سانتی‌متر برداشته شود؛ حتی منفی بودن بیوپسی ردکننده بیماری نیست.
+    </p>
+    <div class="grid2">
+      <div class="mini-card mc-teal">
+        <h5>شاخه‌های درگیر شریان کاروتید خارجی (ECA)</h5>
+        <p>شریان تمپورال سطحی (شاخه‌های پریتال و فرونتال)، شریان فاسیال، شریان ماگزیلاری، شریان اکسیپیتال (ایجاد سردرد پشت سر)، شریان کاروتید مشترک و ورتبرال (خطر ایسکمی مغزی، سرگیجه، تاری دید و CVA).</p>
+      </div>
+      <div class="mini-card mc-green">
+        <h5>پروتکل دارودرمانی و پایش بالینی (۲۰۲۴)</h5>
+        <ul class="list-styled green">
+          <li><span class="li-content"><strong>کورتیکواستروئید دوز بالا:</strong> پردنیزولون به میزان <span class="tag tag-red">1 mg/kg/day</span> فوراً آغاز می‌شود؛ افت سریع ESR نشانگر پاسخ درمانی است (طول دوره درمان معمولاً ≥ ۲ سال).</span></li>
+          <li><span class="li-content"><strong>توسیلizumab (Tocilizumab):</strong> آنتی‌بادی مونوکلونال مهارکننده گیرنده IL-6. طبق گایدلاین ACR در خط اول درمان همراه استروئید (یا EULAR در خط دوم) تایید شده و داروی نجات‌بخش کاتالیزور کاهش استروئید است.</span></li>
+          <li><span class="li-content"><strong>متوتروکسات (MTX) و مهارکننده‌های JAK:</strong> به عنوان داروهای خط دوم جهت حفظ پاسخ و پیشگیری از عوارض طولانی‌مدت کورتون استفاده می‌شوند.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 6 -->
+  <div class="section-header sh-orange" id="sec-6">
+    <div class="icon">🦴</div>
+    <div>۶. پلی‌میالژیا روماتیکا (PMR) و پیوند بالینی آن با GCA</div>
+  </div>
+
+  <div class="subsection sub-orange">
+    <h4>هویت بیماری، علائم بالینی و تمایز از آرتروز</h4>
+    <p>
+      <strong>پلی‌میالژیا روماتیکا (Polymyalgia Rheumatica - PMR)</strong> یک نوع روماتیسم بافت نرم است؛ به این معنا که بیمار علائم ذهنی فوق‌العاده دردناکی دارد اما در معاینه فیزیکی علائم آبجکتیو برهنه‌ای نظیر سینوویت مفصلی برجسته دیده نمی‌شود.
+    </p>
+
+    <div class="grid2">
+      <div class="mini-card mc-orange">
+        <h5>مشخصات سندرم PMR</h5>
+        <ul class="list-styled orange">
+          <li><span class="li-content"><strong>سن شیوع:</strong> منحصراً در سن بالای ۵۰ سال بروز می‌یابد (مشابه GCA در افراد زیر ۵۰ سال به ندرت دیده می‌شود).</span></li>
+          <li><span class="li-content"><strong>الگوی درد:</strong> درد التهابی متقارن دوطرفه در <strong>کمربند شانه‌ای (عضلات بازو و شانه)</strong> و <strong>کمربند لگنی (ران و باسن)</strong> همراه با درد عضلات گردن.</span></li>
+          <li><span class="li-content"><strong>خشکی صبحگاهی:</strong> خشکی شدید به مدت حداقل ۴۵ دقیقه در صبحگاه که با خستگی ناتوان‌کننده همراه است.</span></li>
+          <li><span class="li-content"><strong>شکایت سرپایی شایع:</strong> یکی از شایع‌ترین شکایات سرپایی سالمندان است؛ زن یا مرد سالمندی که به سختی دست‌هایش را برای شانه کردن سر یا لباس پوشیدن بالا می‌برد.</span></li>
+        </ul>
+      </div>
+
+      <div class="mini-card mc-teal">
+        <h5>افتراق حساس: درد التهابی PMR در برابر درد مکانیکی آرتروز (OA)</h5>
+        <div class="kv-row"><span class="kv-key">دردهای آرتروز (استئوآرتریت):</span><span class="kv-value">ماهیت مکانیکی دارد؛ با استراحت تسکین می‌یابد و با راه رفتن، کار و فعالیت سنگین تشدید می‌شود.</span></div>
+        <div class="kv-row"><span class="kv-key">دردهای PMR:</span><span class="kv-value">ماهیت کاملاً التهابی دارد؛ در طول شب تشدید شده، صبحگاه بیمار را با خشکی شدید مواجه می‌کند و در طول روز <strong>با فعالیت‌های معمول روزمره تسکین می‌یابد</strong>.</span></div>
+        <div class="kv-row"><span class="kv-key">تست‌های آزمایشگاهی:</span><span class="kv-value">در PMR جهش شدید در ESR و CRP رخ می‌دهد، در حالی که در آرتروز مارکرهای التهابی کاملاً نرمال هستند.</span></div>
+      </div>
+    </div>
+
+    <div class="infobox ib-red">
+      <span class="ib-icon">🔄</span>
+      <div>
+        <strong>نسبت طلایی ارتباط میان PMR و آرتریت تمپورال (GCA):</strong>
+        <br>
+        • حدود <span class="tag tag-red">90% بیماران GCA</span> که دچار تاری دید، کوری یا سردرد شریانی شده‌اند، در شرح حال چند هفته تا چند ماه گذشته خود علائم کامل پلی‌میالژیا روماتیکا (درد کمربند شانه‌ای/لگنی) را داشته‌اند.
+        <br>
+        • اما از کل مبتلایان به پلی‌میالژیا روماتیکا تنها <span class="tag tag-blue">حدود 10% افراد</span> در سیر پیشرفت بیماری خود به سمت آرتریت تمام‌عیار تمپورال می‌روند.
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 7 -->
+  <div class="section-header sh-green" id="sec-7">
+    <div class="icon">🫀</div>
+    <div>۷. واسکولیت عروق بزرگ ۲: آرتریت تاکایاسو (Takayasu Arteritis)</div>
+  </div>
+
+  <div class="subsection sub-green">
+    <h4>معمای طب بالینی: بیماری بدون نبض (Pulseless Disease)</h4>
+    <p>
+      آرتریت تاکایاسو یک واسکولیت گرانولوماتوز با درگیری آئورت و شاخه‌های ماژور است. این بیماری شایع‌ترین واسکولیت عروق بزرگ در <strong>زنان جوان سنین ۲۰ تا ۲۵ سال (زیر ۵۰ سال)</strong> است. نسبت ابتلای زنان به مردان بسیار بالاست. بیماری به شدت نادر بوده و به دلیل علائم موذیانه اولیه، در اغلب موارد با تأخیر چندماهه یا چندساله تشخیص داده می‌شود (<span class="tag tag-red">Frequently Missed</span>).
+    </p>
+
+    <div class="infobox ib-yellow">
+      <span class="ib-icon">⚠️</span>
+      <div>
+        <strong>تذکر حیاتی تشخیصی:</strong> نام تاریخی این اختلال <em>Pulseless Disease</em> است، اما هنر بالینی پزشک این است که بیماری را <strong>قبل از ناپدید شدن نبض‌ها</strong> تشخیص دهد! زمانی که نبض از دست می‌رود، عروق دچار فیبروز پیشرفته و اسکار دائم شده‌اند. تشخیص زودهنگام باید بر مبنای علائم مشکوک سرشتی، اندازه‌گیری فشارخون هر دو دست و سوفل عروقی صورت گیرد.
+      </div>
+    </div>
+
+    <h4>تظاهرات بالینی شاخص آرتریت تاکایاسو</h4>
+    <ul class="list-styled green">
+      <li><span class="li-content"><strong>تفاوت فشار خون سیستولی بیش از ۱۰ میلی‌متر جیوه بین دو دست:</strong> یکی از مطمئن‌ترین علائم بالینی به نفع انسداد شاخه ساب‌کلاوین.</span></li>
+      <li><span class="li-content"><strong>کلودیکاسیون اندام فوقانی (Arm Claudication):</strong> خستگی شدید، گزگز و ناتوانی دست‌ها به هنگام کارهای روزمره به دلیل افت پرفیوژن محیطی.</span></li>
+      <li><span class="li-content"><strong>کلودیکاسیون و ایسکمی مغزی (Brain Claudication):</strong> تنگی کاروتیدها سبب سبکی سر، سنکوپ، سرگیجه، سردرد، حملات TIA و سکته‌های مغزی در دختران جوان می‌شود.</span></li>
+      <li><span class="li-content"><strong>هایپرتانسیون رنوواسکولار ناشی از درگیری شریان رنال:</strong> تنگی محل اتصال شریان کلیه سبب تحریک ترشح رنین از دستگاه ژوکستاگلومرولی و فشار خون بالا و مقاوم می‌گردد.</span></li>
+      <li><span class="li-content"><strong>سوفل و برویی عروقی (Bruit):</strong> شنیدن صدای سوفل خشن روی شریان ساب‌کلاوین، کاروتید یا آئورت توراسیک و شکمی با گوشی پزشکی.</span></li>
+      <li><span class="li-content"><strong>درد قسمت فوقانی پشت (Upper Back Pain):</strong> درد ارجاعی به قفسه سینه خلفی ناشی از کشیدگی و التهاب تنه آئورت توراسیک در یک خانم جوان با خستگی غیرعادی و تب مبهم.</span></li>
+    </ul>
+
+    <h4>جدول ناهنجاری‌های آنژیوگرافیک و تظاهرات بالینی بالقوه تاکایاسو (مطالعه Kerr et al)</h4>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>شریان درگیر (Artery)</th>
+            <th>درصد ناهنجاری در آنژیوگرافی</th>
+            <th>تظاهرات بالینی بالقوه (Clinical Manifestations)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>شریان ساب‌کلاوین (Subclavian)</strong></td>
+            <td><strong>۹۳ ٪</strong></td>
+            <td>لنگش دست حین کار (Arm claudication)، پدیده رینود، اختلاف فشار دو دست</td>
+          </tr>
+          <tr>
+            <td><strong>شریان کاروتید مشترک (Common Carotid)</strong></td>
+            <td><strong>۵۸ ٪</strong></td>
+            <td>تغییرات میدان بینایی، حملات ایسکمیک گذرا (TIA)، سنکوپ و استروک مغزی</td>
+          </tr>
+          <tr>
+            <td><strong>آئورت شکمی (Abdominal Aorta)*</strong></td>
+            <td><strong>۴۷ ٪</strong></td>
+            <td>دردهای ژرف شکمی، تهوع، استفراغ ناشی از ایسکمی احشایی</td>
+          </tr>
+          <tr>
+            <td><strong>شریان رنال (Renal Artery)</strong></td>
+            <td><strong>۳۸ ٪</strong></td>
+            <td>هایپرتانسیون رنوواسکولار وابسته به رنین، نارسایی تدریجی عملکرد کلیه</td>
+          </tr>
+          <tr>
+            <td><strong>قوس آئورت یا ریشه آن (Aortic Arch / Root)</strong></td>
+            <td><strong>۳۵ ٪</strong></td>
+            <td>نارسایی دریچه آئورت (Aortic Insufficiency)، نارسایی احتقانی قلب (CHF)</td>
+          </tr>
+          <tr>
+            <td><strong>شریان ورتبرال (Vertebral)</strong></td>
+            <td><strong>۳۵ ٪</strong></td>
+            <td>سرگیجه موضعی ورتبروبازیلار، دوبینی و تاری دید گذرا</td>
+          </tr>
+          <tr>
+            <td><strong>تنه سلیاک (Coeliac Axis)*</strong></td>
+            <td><strong>۱۸ ٪</strong></td>
+            <td>آنژین شکمی مزمن پس از صرف غذا (Postprandial pain)، لاغری مفرط</td>
+          </tr>
+          <tr>
+            <td><strong>شریان مزانتریک فوقانی (SMA)*</strong></td>
+            <td><strong>۱۸ ٪</strong></td>
+            <td>ایسکمی روده‌ای، کرامپ‌های گوارشی، سوء‌جذب</td>
+          </tr>
+          <tr>
+            <td><strong>شریان ایلیاک (Iliac)</strong></td>
+            <td><strong>۱۷ ٪</strong></td>
+            <td>کلودیکاسیون و لنگش متناوب ساق پا حین پیاده‌روی (Leg claudication)</td>
+          </tr>
+          <tr>
+            <td><strong>شریان پولمونری (Pulmonary)</strong></td>
+            <td><strong>۱۰ تا ۴۰ ٪</strong></td>
+            <td>درد غیرتیپیک قفسه سینه، تنگی نفس پیشرونده، هایپرتانسیون ریوی</td>
+          </tr>
+          <tr>
+            <td><strong>شریان کرونر (Coronary)</strong></td>
+            <td><strong>کمتر از ۱۰ ٪</strong></td>
+            <td>آنژین صدری، انفارکتوس حاد میوکارد در سنین جوانی</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="font-size:12px; color:var(--muted); margin-top:-10px; margin-bottom:15px;">
+      * ضایعات آنژیوگرافیک در نواحی علامت‌دار اغلب در مراحل اولیه بدون درد شکمی بارز هستند اما نشانگر تخریب دیواره رگ می‌باشند.
+    </div>
+
+    <h4>روش‌های نوین تصویربرداری و پروتکل درمانی در تاکایاسو</h4>
+    <div class="grid2">
+      <div class="mini-card mc-blue">
+        <h5>رویکرد پاراکلینیکی مدرن (تصویربرداری)</h5>
+        <ul class="list-styled">
+          <li><span class="li-content"><strong>ام‌آر آنژیوگرافی (MR Angiography):</strong> بهترین روش در فاز زودهنگام؛ تغییر سیگنال دیواره آئورت و ادم وال را بدون تزریق ماده حاجب نشان می‌دهد (سی‌تی‌آنژیو تنها تنگی و نمای داخل لومن را بررسی می‌کند).</span></li>
+          <li><span class="li-content"><strong>پت اسکن (FDG-PET):</strong> تحول چشمگیر در تصویربرداری التهاب فعال دیواره آئورت پیش از فیبروز قطعی.</span></li>
+          <li><span class="li-content"><strong>ممنوعیت بیوپسی:</strong> بیوپسی آئورت به علت تهاجمی بودن و خطرات پاره شدن دیواره عملاً غیرممکن است.</span></li>
+        </ul>
+      </div>
+      <div class="mini-card mc-green">
+        <h5>استراتژی‌های درمانی</h5>
+        <ul class="list-styled green">
+          <li><span class="li-content"><strong>کورتیکواستروئید دوز بالا:</strong> آغاز فوری با پردنیزولون خوراکی جهت مهار تخریب ساختاری لایه‌ها.</span></li>
+          <li><span class="li-content"><strong>عوامل سرکوب‌کننده ایمنی (MTX):</strong> افزودن متوتروکسات جهت کاهش عوارض استروئیدها و حفظ فاز القا.</span></li>
+          <li><span class="li-content"><strong>داروهای بیولوژیک:</strong> درمان‌های مهارکننده B Cell (مانند ریتوکسی‌ماب) و مهارکننده‌های IL-6 (توسیلizumab).</span></li>
+          <li><span class="li-content"><strong>جراحی بازسازی عروق:</strong> اصلاح استنت یا بای‌پس بایستی حتماً در فاز فروکش التهاب انجام گیرد.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 8 -->
+  <div class="section-header sh-brown" id="sec-8">
+    <div class="icon">🩸</div>
+    <div>۸. واسکولیت عروق متوسط: پلی‌آرتریت ندوزا (PAN) و بیماری کاوازاکی (KD)</div>
+  </div>
+
+  <div class="subsection sub-brown">
+    <h4>پلی‌آرتریت ندوزا (Polyarteritis Nodosa - PAN): مادر واسکولیت‌های تاریخ</h4>
+    <p>
+      پلی‌آرتریت ندوزا در گذشته جامع‌ترین دسته‌بندی واسکولیت‌ها تلقی می‌شد؛ اما با جداسازی AAV و شناخت عروق کوچک، امروزه به عنوان <strong>یکی از نادرترین انواع واسکولیت در بزرگسالان</strong> شناخته می‌شود. این بیماری یک واسکولیت نکروزان سیستمیک است که به صورت انتخابی <strong>شریان‌های عضلانی سایز متوسط (Medium Size Arteries)</strong> را در محل انشعاب‌ها به صورت سگمنتال و منقطع درگیر می‌کند.
+    </p>
+
+    <div class="infobox ib-yellow">
+      <span class="ib-icon">⚡</span>
+      <div>
+        <strong>نکته استثنایی امتحانی در مورد کلیه در PAN:</strong>
+        برخلاف وگنر و MPA، در بیماری PAN <strong>هیچ‌گونه درگیری گلومرولار (گلومرولونفریت) وجود ندارد!</strong> آنالیز ادرار بیماران معمولاً بدون پروتئینوری بارز یا کست گلبول قرمز است. هایپرتانسیون بیمار ناشی از ایسکمی شاخه‌های شریان کلیوی و فعال شدن شدید سیستم رنین-آنژیوتانسین است.
+      </div>
+    </div>
+
+    <h4>ارگان‌های کلیدی هدف و تظاهرات سیستمیک PAN</h4>
+    <div class="grid2">
+      <div class="mini-card mc-brown">
+        <h5>۱. تشکیل میکروآنوریسم‌ها (Aneurysms)</h5>
+        <p>ضعف لایه‌های الاستیک مدیا سبب تشکیل آنوریسم‌های کوچک تسبیحی در شریان‌های مزانتر و رنال در آنژیوگرافی می‌شود که یافته شاخص پاتولوژیک PAN است (البته در عروق بزرگ نظیر تاکایاسو و تمپورال نیز دیده می‌شود).</p>
+        <div class="kv-row"><span class="kv-key">دستگاه گوارش:</span><span class="kv-value">دردهای حاد شکمی، انفارکتوس روده، خونریزی گوارشی و انفارکتوس حاد لوزوالمعده (پانکراتیت)</span></div>
+        <div class="kv-row"><span class="kv-key">ارگان‌های تولیدمثلی:</span><span class="kv-value">ایسکمی و درد بسیار حاد بیضه (Orchitis) یا تخمدان که گاه تنها علامت اولیه PAN است.</span></div>
+      </div>
+      <div class="mini-card mc-red">
+        <h5>۲. پوست، سیستم اعصاب و قلب</h5>
+        <p>
+          <strong>نکروز پوست در برابر پورپورا:</strong> اگر پورپورای لمس‌پذیر ایجاد شود نشانه عروق کوچک است؛ اما هرگاه <strong>نکروز و انفارکتوس گسترده پوستی</strong> رخ دهد، شریان‌های سایز متوسط مسدود شده‌اند (<span class="tag tag-red">Cutaneous PAN</span>).
+        </p>
+        <div class="kv-row"><span class="kv-key">سیستم اعصاب:</span><span class="kv-value">سکته مغزی (CVA) در سن زیر ۵۰ سال و منونوریت مولتیپلکس (<span class="tag tag-purple">Mononeuritis Multiplex</span>)</span></div>
+        <div class="kv-row"><span class="kv-key">درگیری قلبی:</span><span class="kv-value">نارسایی احتقانی قلب (CHF)، پریکاردیت و انفارکتوس حاد میوکارد</span></div>
+      </div>
+    </div>
+
+    <h4>همراهی با ویروس‌های هپاتیت B و C و استراتژی حساس درمان</h4>
+    <p>
+      در حدود ۱۰ تا ۳۰ درصد مبتلایان به PAN، شواهد عفونت فعال با هپاتیت B یافت می‌شود (با وجود محرک ویروسی، خود واسکولیت به عنوان فرم ثانویه ایمنی عمل می‌کند).
+    </p>
+    <div class="infobox ib-red">
+      <span class="ib-icon">💊</span>
+      <div>
+        <strong>اولویت‌بندی حیاتی درمان در PAN مرتبط با HBV:</strong>
+        اگر بیمار PAN با آنتی‌ژن سطحی هپاتیت (<span class="tag tag-red">HBsAg+</span>) مراجعه نماید، درمان خط اول نجات حیات کماکان <strong>کورتیکواستروئیدها و سیکلوفسفامید</strong> برای خاموش کردن توفان نکروزان عروق است؛ چرا که مهار صرف ویروس بیمار را از شوک مرگبار انفارکتوس عروقی نجات نمی‌دهد! پس از مهار فاز حاد التهاب، درمان آنتی‌ویرال بلافاصله اضافه می‌گردد.
+      </div>
+    </div>
+
+    <div class="mini-card mc-blue">
+      <h5>بیماری کاوازاکی (Kawasaki Disease - KD): واسکولیت اطفال</h5>
+      <p>
+        واسکولیت نکروزان عروق متوسط منحصراً ویژه دوران کودکی است.
+        <br>
+        <strong>تفاوت درمانی بنیادین با سایر واسکولیت‌ها:</strong> برخلاف تمامی واسکولیت‌ها که کورتون ستون فقرات آن‌هاست، در کاوازاکی داروی خط اول تجویز <strong>ایمونوگلوبولین وریدی (IVIG)</strong> با دوز بالا به همراه آسپرین جهت ممانعت از تشکیل آنوریسم‌های مرگبار عروق کرونر است (کورتیکواستروئیدها خط اول نیستند!).
+      </div>
+  </div>
+
+  <!-- SECTION 9 -->
+  <div class="section-header sh-pink" id="sec-9">
+    <div class="icon">🫁</div>
+    <div>۹. واسکولیت‌های عروق کوچک مرتبط با ANCA: گرانولوماتوز با پلی‌آنژئیت (GPA / وگنر)</div>
+  </div>
+
+  <div class="subsection sub-pink">
+    <h4>همه‌گیرشناسی و مفهوم پاتوفیزیولوژیک</h4>
+    <p>
+      گرانولوماتوز با پلی‌آنژئیت (با نام قدیمی وگنر) یکی از شایع‌ترین انواع واسکولیت‌های وابسته به ANCA است (شیوع حدود ۳ در هر ۱۰۰ هزار نفر با توزیع جنسیتی کاملاً برابر ۱:۱). سن غالب ابتلا میان ۳۵ تا ۵۵ سالگی است، اگرچه در اطفال و کهنسالان نیز رویت شده است. پاتولوژی کلاسیک آن عبارت است از <strong>واسکولیت نکروزان عروق کوچک همراه با تشکیل گرانولوم‌های داخل و خارج‌عروقی</strong>.
+    </p>
+
+    <h4>تظاهرات بالینی اندام‌های درگیر در GPA (وگنر)</h4>
+    <div class="grid2">
+      <div class="mini-card mc-red">
+        <h5>۱. دستگاه تنفسی فوقانی (Upper Respiratory)</h5>
+        <ul class="list-styled red">
+          <li><span class="li-content"><strong>ترشحات خونی بینی (Bloody Nasal Discharge):</strong> در بیش از ۹۰٪ موارد تظاهر اولیه بیماری خون‌دماغ و ترشحات چرکی-خونی است.</span></li>
+          <li><span class="li-content"><strong>سینوزیت‌های مزمن مقاوم به درمان:</strong> سردرد و درد سینوس که علی‌رغم چندین دوره آنتی‌بیوتیک تسکین نمی‌یابد.</span></li>
+          <li><span class="li-content"><strong>اوتیت مدیا سروز و اختلالات شنوایی:</strong> ناشی از درگیری شیپور استاش و عروق گوش میانی.</span></li>
+          <li><span class="li-content"><strong>تنگی ساب‌گلوتیک (Subglottic Stenosis):</strong> تنگی مجرای حنجره در ناحیه زیر تارها (در لوپوس هم دیده می‌شود ولی برای GPA بسیار اختصاصی‌تر است).</span></li>
+          <li><span class="li-content"><strong>بینی زینی‌شکل (Saddle Nose Deformity):</strong> ارتشاح سلول‌های التهابی و نکروز ساختار استخوان و غضروف در محل سپتوم بینی سبب تخریب و فرورفتگی کامل تیغه بینی می‌گردد.</span></li>
+        </ul>
+      </div>
+
+      <div class="mini-card mc-purple">
+        <h5>۲. دستگاه تنفسی تحتانی (Lower Respiratory)</h5>
+        <ul class="list-styled purple">
+          <li><span class="li-content"><strong>ندول‌های ریوی متعدد با تشکیل حفره (Cavitary Nodules):</strong> ندول‌هایی در پارانشیم ریه که دچار نکروز مرکزی شده و حفرات جدار ضخیم ایجاد می‌کنند (مستعد سوار شدن عفونت‌های قارچی/باکتریایی).</span></li>
+          <li><span class="li-content"><strong>خونریزی منتشر آلوئولار (Diffuse Alveolar Hemorrhage - DAH):</strong> خطرناک‌ترین اورژانس پزشکی! تمامی آلوئول‌ها مانند آبکش پر از خون می‌شوند؛ همراه با هموپتیزی شدید و خفگی. شایع‌ترین علت روماتولوژیک DAH بیماری GPA است.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="grid2">
+      <div class="mini-card mc-teal">
+        <h5>۳. تظاهرات چشمی، پوستی و دهانی</h5>
+        <div class="kv-row"><span class="kv-key">اسکلریت شدید (Scleritis):</span><span class="kv-value">درگیری تمام‌عیار سفیدی چشم و قرمزی دردناک؛ خطر سوراخ شدن کره چشم (<span class="tag tag-red">Perforation</span>) که اورژانس مطلق روماتولوژی است!</span></div>
+        <div class="kv-row"><span class="kv-key">پودوتومور رترواوربیتال (Pseudo-tumor Oculi):</span><span class="kv-value">ضایعه تومورال التهابی پشت کره چشم که سبب بیرون‌زدگی چشم (پروپتوز) می‌گردد.</span></div>
+        <div class="kv-row"><span class="kv-key">لثه توت‌فرنگی (Strawberry Gum):</span><span class="kv-value">یافته تشخیصی پاتوگنومونیک؛ هایپرپلازی و برجستگی‌های عروقی اریتماتوز و دانه‌دانه در لثه‌ها شبیه به بافت توت‌فرنگی!</span></div>
+        <div class="kv-row"><span class="kv-key">پورپورای لمس‌پذیر (Palpable Purpura):</span><span class="kv-value">واسکولیت لکوسیتوکلاستیک در پوست که بر اثر دیاسکوپی و فشار انگشت محو نمی‌شود. گانگرن در پوست دیده نمی‌شود چون عروق ریز هستند.</span></div>
+      </div>
+
+      <div class="mini-card mc-blue">
+        <h5>۴. درگیری کلیوی: گلومرولونفریت هلال‌شکل پائوسی‌ایمیون</h5>
+        <p>
+          شایع‌ترین تظاهر کلیوی به صورت <strong>Crescentic Glomerulonephritis</strong> است.
+        </p>
+        <ul class="list-styled">
+          <li><span class="li-content"><strong>رسوب ایمنی اندک (Pauci-Immune GN):</strong> برخلاف لوپوس، در ایمونوفلورسانس گلومرول‌ها هیچ‌گونه رسوب بارز IgG یا کمپلمان دیده نمی‌شود.</span></li>
+          <li><span class="li-content"><strong>هماچوری میکروسکوپیک و ازوتمی:</strong> در ۷۰ تا ۸۰ درصد بیماران ادرار خونی و افزایش سریع کراتینین مشاهده می‌شود؛ پروتئینوری شدید نادر است.</span></li>
+          <li><span class="li-content">عدم درگیری شریان‌های متوسط کلیه بر خلاف PAN.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <h4>یافته‌های سرولوژیک اختصاصی و رژیم دارودرمانی وگنر</h4>
+    <div class="infobox ib-teal">
+      <span class="ib-icon">🧪</span>
+      <div>
+        <strong>پروفایل آزمایشگاهی ANCA در وگنر (GPA):</strong>
+        <br>
+        • تست <span class="tag tag-red">c-ANCA در 70 تا 80 درصد</span> موارد مثبت است.
+        <br>
+        • آنتی‌بادی علیه <span class="tag tag-blue">Anti-PR3 در بیش از 90 درصد</span> موارد مثبت می‌گردد.
+        <br>
+        • تست p-ANCA در حدود ۲۰٪ موارد مثبت بوده و ۵ تا ۶٪ بیماران ممکن است ANCA منفی باشند.
+      </div>
+    </div>
+
+    <div class="mini-card mc-green">
+      <h5>رژیم‌های درمانی خط اول و نجات‌بخش در GPA</h5>
+      <div class="kv-row"><span class="kv-key">۱. استروئیدها:</span><span class="kv-value">پالس متیل‌پردنیزولون در فاز حاد و ادامه با کورتیکواستروئید دوز بالا</span></div>
+      <div class="kv-row"><span class="kv-key">۲. بیولوژیک ضد CD20:</span><span class="kv-value"><strong>ریتوکسی‌ماب (Rituximab)</strong> امروزه جایگزین سیکلوفسفامید به عنوان درمان استاندارد القا و مهار بیماری شده است.</span></div>
+      <div class="kv-row"><span class="kv-key">۳. سیکلوفسفامید (Cyclophosphamide):</span><span class="kv-value">در اشکال تهدیدکننده حیات، نارسایی حاد کلیه یا DAH در صورت عدم دسترسی به ریتوکسی‌ماب</span></div>
+      <div class="kv-row"><span class="kv-key">۴. کوتریموکسازول (Co-trimoxazole):</span><span class="kv-value">تجویز دوز پروفیلاکتیک این آنتی‌بیوتیک علاوه بر ریشه‌کنی کلونیزاسیون استافیلوکوک اورئوس در مخاط بینی و پیشگیری از عفونت پنوموسیستیس جیرووسی (PJP)، به طرز شگفت‌آوری از <strong>عودهای سینوسی و ریوی GPA</strong> جلوگیری می‌کند!</span></div>
+    </div>
+  </div>
+
+  <!-- SECTION 10 -->
+  <div class="section-header sh-cyan" id="sec-10">
+    <div class="icon">🫀</div>
+    <div>۱۰. گرانولوماتوز ائوزینوفیلیک با پلی‌آنژئیت (EGPA / سندرم چرگ اشتراوس)</div>
+  </div>
+
+  <div class="subsection sub-cyan">
+    <h4>پاتوفیزیولوژی و فنوتیپ آلرژیک</h4>
+    <p>
+      <strong>EGPA</strong> یکی دیگر از واسکولیت‌های سیستمیک عروق کوچک مرتبط با ANCA است که ویژگی ساختاری آن ترکیب واسکولیت گرانولوماتوز نکروزان با <strong>دیاتز آتوپیک شدید، آسم دیررس بالغین، آلرژی‌های دارویی و کهیرهای مکرر</strong> است. ارتشاح بافتی سلول‌های ائوزینوفیل در کانون‌های درگیر جدار عروق علامت اصلی آن است (همان وگنر با محوریت سلول‌های ائوزینوفیل).
+    </p>
+
+    <div class="grid2">
+      <div class="mini-card mc-cyan">
+        <h5>اپیدمیولوژی و مقایسه بروز با وگنر</h5>
+        <div class="kv-row"><span class="kv-key">میزان بروز (Incidence):</span><span class="kv-value">به مراتب کمتر از وگنر (GPA) است. بروز EGPA حدود ۱ مورد در هر ۳ سال به ازای ۱۰۰ هزار نفر است، در حالی که GPA سالانه ۲ تا ۵ نفر در ۱۰۰ هزار نفر بروز دارد.</span></div>
+        <div class="kv-row"><span class="kv-key">نسبت جمعیتی:</span><span class="kv-value">به ازای هر ۳۰ بیمار GPA، تنها حدود ۲ بیمار EGPA تشخیص داده می‌شوند.</span></div>
+        <div class="kv-row"><span class="kv-key">سن شیوع:</span><span class="kv-value">سن ابتلای EGPA کمی بالاتر از کف سنی GPA بوده و عمدتاً حول و حوش سن ۵۰ سالگی متمرکز است.</span></div>
+      </div>
+
+      <div class="mini-card mc-red">
+        <h5>تظاهرات بالینی متمایز EGPA</h5>
+        <ul class="list-styled red">
+          <li><span class="li-content"><strong>سابقه آسم دیررس شدید:</strong> بیمار اغلب سال‌ها تحت درمان تنگی‌نفس آسم با کورتون خوراکی یا استنشاقی بوده و به محض قطع استروئید، علائم سیستمیک شعله‌ور می‌شوند.</span></li>
+          <li><span class="li-content"><strong>ارتشاح ریوی مهاجر (Migratory Infiltrates):</strong> ارتشاح ریوی در EGPA برخلاف GPA که توده‌های فیکس و ثابت کاویته‌دار هستند، گذرا و جابجاشونده است.</span></li>
+          <li><span class="li-content"><strong>درگیری شدید قلبی (شایع‌ترین علت مرگ):</strong> شیوع کاردیومیوپاتی، میوکاردیت ائوزینوفیلیک، پریکاردیت و ایسکمی عروق کرونر در EGPA بسیار شایع‌تر از وگنر است.</span></li>
+          <li><span class="li-content"><strong>مونونوریت مولتیپلکس:</strong> آسیب‌های عصبی فلج‌کننده محیطی با شیوع مشابه وگنر رخ می‌دهد.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <h4>معمای ارزیابی آزمایشگاهی ائوزینوفیل‌ها و پروفایل ANCA</h4>
+    <p>
+      شمارش ائوزینوفیل‌های خون محیطی در بیماران معمولاً مقادیر بالای <strong>۱۵۰۰ سلول در میلی‌متر مکعب</strong> را نشان می‌دهد؛ اما نکته بسیار ظریف بالینی پنهان شدن ائوزینوفیلی است:
+    </p>
+    <div class="infobox ib-yellow">
+      <span class="ib-icon">🎭</span>
+      <div>
+        <strong>پدیده پنهان‌سازی ائوزینوفیل‌ها (Masking Phenomenon):</strong>
+        به دلیل سابقه آسم زمینه‌ای، بسیاری از این بیماران پیش از مراجعه از کورتون‌ها استفاده می‌کنند. از آنجا که ائوزینوفیل‌ها حساسیت فوق‌العاده بالایی به استروئید دارند، دوزهای پایین پردنیزولون سریعاً سبب محو شدن ائوزینوفیل‌های خون محیطی می‌گردد؛ بنابراین <strong>ائوزینوفیلی بافتی در بیوپسی</strong> استاندارد طلایی و باارزش‌ترین یافته است.
+      </div>
+    </div>
+
+    <div class="grid2">
+      <div class="mini-card mc-purple">
+        <h5>پروفایل آنتی‌بادی سرمی در EGPA</h5>
+        <p>
+          برخلاف وگنر، در چرگ اشتراوس آنتی‌بادی <span class="tag tag-purple">p-ANCA (Anti-MPO)</span> شیوع بالاتری دارد اما تنها در <strong>۳۵ تا ۴۵ درصد</strong> موارد مثبت است. درصد بالای بیماران ANCA منفی هستند، به این معنی که تشخیص EGPA در صورت حضور کلینیک واضح حتی در غیاب تست‌های مثبت سرمی مسجل است.
+        </p>
+      </div>
+      <div class="mini-card mc-green">
+        <h5>پاسخ به درمان</h5>
+        <p>
+          به دلیل حساسیت خیره‌کننده سلول‌های ائوزینوفیل به داروها، بیماران به کورتیکواستروئیدها فوق‌العاده عالی پاسخ می‌دهند. در درگیری‌های شدید ارگانی (قلب یا عصب)، ریتوکسی‌ماب، مپولیزوماب (Anti-IL5) یا سیکلوفسفامید به رژیم افزوده می‌شود.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 11 -->
+  <div class="section-header sh-indigo" id="sec-11">
+    <div class="icon">🔬</div>
+    <div>۱۱. پلی‌آنژئیت میکروسکوپیک (Microscopic Polyangiitis - MPA)</div>
+  </div>
+
+  <div class="subsection sub-indigo">
+    <h4>هویت بیماری و تفکیک قطعی از بیماری PAN</h4>
+    <p>
+      در گذشته به دلیل شباهت‌های اسمی، MPA را گونه‌ای از PAN تلقی می‌کردند؛ اما فلسفه پاتولوژیک آن‌ها کاملاً متمایز است:
+      <br>
+      • بیماری PAN شریان‌های با سایز متوسط را بدون آسیب به مویرگ‌ها درگیر می‌سازد.
+      <br>
+      • در حالی که <strong>MPA منحصراً عروق کوچک (کاپیلاری‌ها، آرتریول‌ها و ونول‌ها)</strong> را مبتلا ساخته و جزء خانواده بزرگ AAV است.
+    </p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>شاخص ارزیابی</th>
+            <th>پلی‌آرتریت ندوزا (PAN)</th>
+            <th>پلی‌آنژئیت میکروسکوپیک (MPA)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>سایز عروق اصلی هدف</strong></td>
+            <td>شریان‌های عضلانی سایز متوسط (Medium-sized)</td>
+            <td>عروق خونی کوچک، مویرگ‌ها و آرتریول‌ها (Small-sized)</td>
+          </tr>
+          <tr>
+            <td><strong>درگیری کلیوی</strong></td>
+            <td>ایسکمی عروق بزرگ، هایپرتانسیون رنوواسکولار، <strong>فاقد گلومرولونفریت</strong></td>
+            <td><strong>گلومرولونفریت هلال‌شکل تقریباً در ۱۰۰٪ موارد</strong> (هماچوری شدید، نارسایی کلیه)</td>
+          </tr>
+          <tr>
+            <td><strong>درگیری ریوی</strong></td>
+            <td>ریه درگیر نمی‌شود (شریان پولمونری مصون است)</td>
+            <td>خونریزی منتشر آلوئولار (DAH) بسیار شایع و تهدیدکننده حیات</td>
+          </tr>
+          <tr>
+            <td><strong>تشکیل میکروآنوریسم</strong></td>
+            <td>بسیار شایع در مزانتر و شریان کلیه در آنژیوگرافی</td>
+            <td>معمولاً آنوریسم‌های واضح دیده نمی‌شود</td>
+          </tr>
+          <tr>
+            <td><strong>ارتباط با مارکرهای سرولوژیک</strong></td>
+            <td>ارتباط با HBsAg هپاتیت B (تست ANCA منفی)</td>
+            <td><strong>ارتباط بسیار بالا با p-ANCA (Anti-MPO)</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h4>مشخصات بالینی اختصاصی MPA</h4>
+    <ul class="list-styled teal">
+      <li><span class="li-content"><strong>درگیری گلومرولار کلیه:</strong> تقریباً در تمام بیماران دیده می‌شود؛ رسوب اندک ایمنی (Pauci-immune)، ازوتمی و پیشرفت برق‌آسا به سمت نارسایی مرحله نهایی (ESRD).</span></li>
+      <li><span class="li-content"><strong>خونریزی آلوئولار منتشر (DAH):</strong> بعد از GPA، شایع‌ترین علت واسکولیتیک DAH در جهان است (شیوعی بالاتر از لوپوس).</span></li>
+      <li><span class="li-content"><strong>سن و جنسیت:</strong> در سنین حدود ۶۰ سالگی شایع است (در مقایسه با سنین ۴۰ تا ۵۰ سال در وگنر) و شیوع بیماری بر خلاف وگنر، <strong>در مردان بیشتر از زنان</strong> گزارش شده است.</span></li>
+      <li><span class="li-content"><strong>مونونوریت مولتیپلکس و ضایعات پوستی:</strong> ضایعات عروقی پوست به فرم پورپورای لمس‌پذیر و درگیری اعصاب محیطی شیوع بالایی دارد.</span></li>
+    </ul>
+  </div>
+
+  <!-- SECTION 12 -->
+  <div class="section-header sh-blue" id="sec-12">
+    <div class="icon">❄️</div>
+    <div>۱۲. واسکولیت‌های با واسطه کمپلکس ایمنی: کرایوگلوبولینمی و پورپورای هنوخ شوئن‌لاین</div>
+  </div>
+
+  <div class="subsection sub-blue">
+    <h4>۱. کرایوگلوبولینمی مخلوط ضروری (Essential Mixed Cryoglobulinemia)</h4>
+    <p>
+      واسکولیت عروق کوچک ناشی از رسوب پروتئین‌های غیرطبیعی ایمونوگلوبولین در پلاسما به نام <strong>کرایوگلوبولین (Cryoglobulin)</strong> است. این پروتئین‌ها ویژگی منحصربه‌فردی دارند: در دمای پایین سرما (۴ تا ۷ درجه سانتی‌گراد) رسوب کرده و با گرم کردن مجدد (<span class="tag tag-yellow">Rewarming</span>) دوباره در پلاسما حل می‌شوند.
+    </p>
+
+    <div class="grid2">
+      <div class="mini-card mc-blue">
+        <h5>پیوند نزدیک با ویروس هپاتیت C (HCV)</h5>
+        <p>ارتباط بسیار قدرتمندی میان این بیماری و هپاتیت C وجود دارد. در منابع علمی معتبر ذکر شده که در حدود <strong>۵ درصد مبتلایان به هپاتیت C مزمن</strong>، واسکولیت تمام‌عیار کرایوگلوبولینمیک تظاهر پیدا می‌کند.</p>
+        <div class="kv-row"><span class="kv-key">مارکرهای تشخیصی:</span><span class="kv-value"><strong>فاکتور روماتوئید (RF) تقریباً در ۱۰۰٪ موارد مثبت است!</strong> سطح کمپلمان C4 بسیار پایین می‌آید.</span></div>
+      </div>
+      <div class="mini-card mc-red">
+        <h5>تظاهرات بالینی در مواجهه با سرما</h5>
+        <p>با افت دمای محیط و تماس اندام‌ها، نوک بینی، لاله‌های گوش و انگشتان با هوای سرد، رسوب پروتئین‌ها سبب انسداد حاد و ایسکمی عروق کوچک می‌شود.</p>
+        <p>پورپورای لمس‌پذیر لکوسیتوکلاستیک در این بیماری بسیار گسترده‌تر و متراکم‌تر از وگنر است؛ ضعف شدید و دردهای مفصلی (سه‌گانه ملتر: پورپورا، آرترالژی و ضعف) تابلوی تیپیک آن هستند.</p>
+      </div>
+    </div>
+
+    <h4>۲. پورپورای هنوخ شوئن‌لاین (Henoch-Schönlein Purpura - HSP / IgA Vasculitis)</h4>
+    <p>
+      شایع‌ترین واسکولیت دوران کودکی است که در اثر رسوب کمپلکس‌های ایمنی حاوی <strong>IgA</strong> در جدار عروق کوچک، پوست، دستگاه گوارش و کلیه‌ها شکل می‌گیرد (البته در بالغان نیز با تظاهرات وخیم‌تر دیده می‌شود).
+    </p>
+
+    <div class="grid2">
+      <div class="mini-card mc-purple">
+        <h5>چهارگانه بالینی شاخص در HSP</h5>
+        <ul class="list-styled purple">
+          <li><span class="li-content"><strong>پورپورای لمس‌پذیر (Palpable Purpura):</strong> پورپورای بدون ترومبوسیتوپنی که توزیع آناتومیک بسیار خاصی دارد: متمرکز در <strong>ناحیه باسن (Buttocks)</strong> و اندام‌های تحتانی.</span></li>
+          <li><span class="li-content"><strong>دردهای مفصلی (Arthralgia / Arthritis):</strong> تورم و درد مفاصل زانو و مچ پا بدون بر جای گذاشتن بدشکلی ماندگار.</span></li>
+          <li><span class="li-content"><strong>دردهای کولیکی شکم و درگیری گوارشی:</strong> ایسکمی روده می‌تواند سبب دردهای کرامپی شدید، ملنا، خونریزی روشن رکتوم (هماتوشزی) و در کودکان انواژیناسیون شود.</span></li>
+          <li><span class="li-content"><strong>نفروپاتی IgA و درگیری کلیوی:</strong> هماچوری میکروسکوپیک، کست‌های RBC و پروتئینوری که در بیوپسی کلیه با رسوب مزانژیال IgA مشخص می‌شود.</span></li>
+        </ul>
+      </div>
+
+      <div class="mini-card mc-teal">
+        <h5>تشخیص قطعی و مدیریت درمانی HSP</h5>
+        <p>تشخیص اولیه بر بالین استوار است اما استاندارد طلایی بیوپسی پوست و <strong>رنگ‌آمیزی ایمونوفلورسانس مستقیم (DIF)</strong> است که رسوب درخشان دامنه‌های IgA را در ونول‌های درم نشان می‌دهد.</p>
+        <p>
+          <strong>درمان:</strong> بیماری در بیشتر کودکان خودبه‌خود محدودشونده (Self-limiting) است و نیاز به درمان اختصاصی ندارد. با این وجود در فرم‌های تهدیدکننده ارگان (خونریزی‌های شدید گوارشی یا گلومرولونفریت پیشرونده)، کورتیکواستروئیدها (پردنیزولون خوراکی یا متیل‌پردنیزولون وریدی) تجویز می‌گردند.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 13 -->
+  <div class="section-header sh-teal" id="sec-13">
+    <div class="icon">🧠</div>
+    <div>۱۳. واسکولیت‌های متغیر و تک‌اندامی: واسکولیت ایزوله CNS، پوست و بیماری بهجت</div>
+  </div>
+
+  <div class="subsection sub-teal">
+    <h4>۱. واسکولیت ایزوله سیستم اعصاب مرکزی (Isolated Vasculitis of the CNS / PACNS)</h4>
+    <p>
+      بیماری نادری است که به طور کاملاً اختصاصی شریان‌های سایز کوچک و متوسط داخل پارانشیم مغز و لپتومننژ را مبتلا می‌سازد بدون آنکه هیچ‌گونه واسکولیت در سایر دستگاه‌های بدن وجود داشته باشد.
+    </p>
+
+    <div class="infobox ib-yellow">
+      <span class="ib-icon">⚠️</span>
+      <div>
+        <strong>دام بالینی خطرناک در واسکولیت مغزی:</strong>
+        تظاهر بیماری سردردهای شدید و تغییرات وضعیت روانی و سکته‌های مغزی راجعه است. <strong>نکته فوق‌العاده حیاتی این است که در این بیماری مارکرهای التهابی سیستمیک خون (ESR و CRP) عموماً کاملاً نرمال هستند!</strong> آزمایش مایع مغزی‌نخاعی (CSF) ارتشاح لنفوسیتی و افزایش پروتئین را نشان می‌دهد. استاندارد طلایی بیوپسی مننژ و مغز است و آنژیوگرافی کاتتری نمای دانه‌تسبیحی (Beading) عروق را نشان می‌دهد.
+      </div>
+    </div>
+
+    <h4>۲. واسکولیت کهیری و افزایش‌حساسیت پوستی (Idiopathic Cutaneous / Hypersensitivity)</h4>
+    <div class="grid2">
+      <div class="mini-card mc-orange">
+        <h5>واسکولیت پوستی با افزایش‌حساسیت</h5>
+        <p>واسکولیت لکوسیتوکلاستیک درم ناشی از رسوب ایمنی در ونول‌های ریز پوست است. علائم به فرم پورپورای لمس‌پذیر و کهیرهای برجسته مزمن بیش از ۲۴ ساعت (<span class="tag tag-orange">Chronic Urticaria</span>) بروز می‌یابد. شایع‌ترین علت، واکنش‌های دارویی و سپس عفونت‌های ویروسی و بیماری‌های زمینه‌ای کلاژن-واسکولار است.</p>
+      </div>
+      <div class="mini-card mc-blue">
+        <h5>واسکولیت کهیری هیپوکمپلمانمیک (HUV)</h5>
+        <p>نوع خاصی از واسکولیت عروق کوچک با واسطه آنتی‌بادی علیه اجزای کمپلمان (<span class="tag tag-red">Anti-C1q Vasculitis</span>) که با کهیرهای مداوم دردناک، هیپوکمپلمانمی پایدار (افت شدید C3 و C4)، آنژیوادم، آسم و درگیری خفیف کلیوی مشخص می‌گردد.</p>
+      </div>
+    </div>
+
+    <h4>۳. بیماری بهجت (Behçet's Disease): واسکولیت عروق متغیر</h4>
+    <p>
+      بهجت نمونه کلاسیک واسکولیت عروق متغیر است و پدیده استثنایی آن این است که <strong>می‌تواند به صورت کاملاً ایزوله تنها وریدها را درگیر سازد</strong> و ایجاد ترومبوزهای راجعه در ورید اجوف تحتانی، فوقانی و سینوس‌های وریدی مغز نماید.
+    </p>
+    <ul class="list-styled teal">
+      <li><span class="li-content"><strong>آفت‌های راجعه دهانی:</strong> آفت‌های دردناک دهانی، مینور یا ماژور که سالانه چندین بار تکرار می‌شوند (شرط تشخیصی الزامی).</span></li>
+      <li><span class="li-content"><strong>آفت‌های تناسلی:</strong> ضایعات اولسراتیو ژنیتال که معمولاً با بر جای گذاشتن اسکار بهبود می‌یابند.</span></li>
+      <li><span class="li-content"><strong>درگیری چشمی ویرانگر (Uveitis & Iritis):</strong> یووئیت قدامی با هایپوپیون و رتینیت خلفی نکروزان؛ بدون درمان بیش از ۵۰٪ این بیماران دچار کوری دائم می‌شوند (با درمان سرکوب‌کننده ایمنی این نرخ افت چشمگیری یافته است).</span></li>
+      <li><span class="li-content"><strong>سایر تظاهرات:</strong> تست پاتِرژی مثبت (واکنش پوسچولار به ترومای سوزن)، اریتم ندوزوم و آنوریسم‌های کشنده شریان پولمونری.</span></li>
+    </ul>
+  </div>
+
+  <!-- SECTION 14 -->
+  <div class="section-header sh-red" id="sec-14">
+    <div class="icon">🛑</div>
+    <div>۱۴. مقلدهای واسکولیت (Vasculitis Mimickers / Pseudovasculitis)</div>
+  </div>
+
+  <div class="subsection sub-red">
+    <h4>چالش حیاتی در طب داخلی: افتراق التهاب از انسدادهای ترومبوتیک غیرالتهابی</h4>
+    <p>
+      بسیاری از بیماری‌ها تابلوهای بالینی گمراه‌کننده شبیه واسکولیت (ایسکمی ناگهانی انگشتان، پورپورا، استروک و درگیری چند ارگان) ایجاد می‌کنند. افتراق این شرایط برای پزشک بسیار حیاتی است زیرا تجویز دوز بالای سرکوب‌کننده ایمنی در یک بیماری مقلد (نظیر اندوکاردیت) می‌تواند مرگبار باشد.
+    </p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>دسته اختلال</th>
+            <th>بیماری مقلد (Mimicker)</th>
+            <th>مکانیسم پاتولوژیک و وجوه تمایز بالینی از واسکولیت واقعی</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>پدیده‌های ترومبوتیک و آمبولی</strong></td>
+            <td><strong>سندرم آنتی‌فسفولیپید (APS) و هایپرهموسیستئینمی</strong></td>
+            <td>انسداد عروقی ناشی از ترومبوزهای ایزوله ورید و شریان است و هیچ‌گونه التهاب تخریبی تمام‌ضخامت در لایه‌های جدار عروق وجود ندارد.</td>
+          </tr>
+          <tr>
+            <td><strong>دیسپلازی‌های ساختاری</strong></td>
+            <td><strong>دیسپلازی فیبروموسکولار (FMD)</strong></td>
+            <td>تکثیر غیرطبیعی فیبروز در مدیا و انتیما؛ نمای رشته تسبیح در شریان کاروتید و رنال زنان جوان بدون مارکرهای التهابی و فاقد ارتشاح سلولی.</td>
+          </tr>
+          <tr>
+            <td><strong>ترومبوزهای انسدادی التهابی</strong></td>
+            <td><strong>بیماری برگر (Thromboangiitis Obliterans)</strong></td>
+            <td>انسداد عروقی همراه با ترومبوزهای بسیار متراکم التهابی در افراد سیگاری؛ برخلاف واسکولیت‌های کلاسیک، درگیری تمام‌ضخامت و نکروز فیبرینوئید دیواره عروق دیده نمی‌شود.</td>
+          </tr>
+          <tr>
+            <td><strong>تغییرات دژنراتیو عروقی</strong></td>
+            <td><strong>آترواسکلروز پیشرفته و فرآیند سالمندی (Aging)</strong></td>
+            <td>پدیده سفت شدن و فرسودگی عروق سالمندان؛ تغییرات اسکلروتیک و رسوب پلاک چربی و آمبولی‌های کلسترولی که کمتر ماهیت واسکولیت اولیه نکروزان دارند.</td>
+          </tr>
+          <tr>
+            <td><strong>عفونت‌های اندوواسکولار</strong></td>
+            <td><strong>اندوکاردیت عفونی (Infective Endocarditis)</strong></td>
+            <td>تشکیل وجتیشن و آمبولی سپتیک؛ پورپورا، خونریزی زیر ناخن و ندول‌های اسلر تقلیدکننده واسکولیت عروق کوچک و حتی مثبت‌کننده کاذب تست‌های ANCA و RF!</td>
+          </tr>
+          <tr>
+            <td><strong>بدخیمی‌های نئوپلاستیک</strong></td>
+            <td><strong>گرانولوماتوز لنفوماتوئید (Lymphomatoid Granulomatosis)</strong></td>
+            <td>ارتشاح بدخیم و نئوپلاستیک سلول‌های لکوسیتوریک در جدار عروق که ماهیت لنفومای سلول B وابسته به EBV دارد و برخورد درمانی آن کاملاً انکولوژیک و متفاوت از واسکولیت است.</td>
+          </tr>
+          <tr>
+            <td><strong>رسوب پروتئین‌های غیرطبیعی</strong></td>
+            <td><strong>آمیلوئیدوز سیستمیک (Systemic Amyloidosis)</strong></td>
+            <td>رسوب ماده آمیلوئید در جدار مویرگ‌ها و شریان‌ها؛ شکنندگی فوق‌العاده عروق، ایجاد پورپورای دور چشم (Raccoon Eyes)، کلودیکاسیون زبان و نارسایی ارگانی که مقلد واسکولیت است.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- SECTION 15 -->
+  <div class="section-header sh-green" id="sec-15">
+    <div class="icon">💊</div>
+    <div>۱۵. جدول مقایسه‌ای جامع دارودرمانی، پایش‌ها و هشدارهای حیات‌بخش</div>
+  </div>
+
+  <div class="subsection sub-green">
+    <h4>خلاصه راهبردی پروتکل‌های دارودرمانی و پارامترهای پایش در انواع واسکولیت</h4>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>نوع واسکولیت</th>
+            <th>درمان فاز حاد و القای فروکش</th>
+            <th>درمان نگهدارنده و جایگزین</th>
+            <th>پایش‌های آزمایشگاهی و علائم خطر</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>آرتریت تمپورال (GCA)</strong></td>
+            <td>پردنیزولون خوراکی 1 mg/kg/day (در درگیری بینایی پالس متیل‌پردنیزولون ۱ گرم روزانه تا ۳ روز)</td>
+            <td><strong>توسیلizumab (خط اول مدرن)</strong>، متوتروکسات، مهارکننده‌های JAK (طول درمان ≥ ۲ سال)</td>
+            <td>افت سریع سطح ESR و CRP؛ پایش سردرد، معاینه چشم، لنگش فک و عوارض استروئید</td>
+          </tr>
+          <tr>
+            <td><strong>تاکایاسو (TAK)</strong></td>
+            <td>پردنیزولون دوز بالا (1 mg/kg) همراه با شروع زودهنگام داروهای مهارکننده سیستم ایمنی</td>
+            <td>متوتروکسات، ریتوکسی‌ماب (مهار B Cell)، توسیلizumab؛ اصلاح جراحی/آنژیوپلاستی استنت در فاز خاموشی</td>
+            <td>پایش فشار خون هر دو دست، سمع برویی‌های کاروتید/ساب‌کلاوین، پیگیری ادم دیواره در MRA و PET</td>
+          </tr>
+          <tr>
+            <td><strong>پلی‌آرتریت ندوزا (PAN)</strong></td>
+            <td>پردنیزولون دوز بالا + <strong>سیکلوفسفامید</strong>؛ در موارد ناشی از هپاتیت B شروع کورتون و سپس درمان آنتی‌ویرال</td>
+            <td>آزاتیوپرین، تعویض پلاسما در موارد شدید هپاتیت B مقاوم؛ کنترل تهاجمی هایپرتانسیون رنوواسکولار</td>
+            <td>پایش فشار خون، آنزیم‌های پانکراس و کبد، درد بیضه، نوار عصب و عضله (EMG/NCV) و HBsAg</td>
+          </tr>
+          <tr>
+            <td><strong>گرانولوماتوز وگنر (GPA)</strong></td>
+            <td><strong>ریتوکسی‌ماب (375 mg/m² هفتگی × ۴)</strong> یا سیکلوفسفامید + پالس متیل‌پردنیزولون و ادامه با پردنیزولون</td>
+            <td>ریتوکسی‌ماب دوره‌ای، آزاتیوپرین، <strong>کوتریموکسازول دوز پروفیلاکتیک</strong> جهت کاهش عودهای تنفسی</td>
+            <td>پایش کراتینین، آنالیز ادرار (هماچوری)، افت تیتر c-ANCA/PR3، گرافی سینه (کاویته ریوی) و معاینه قرنیه</td>
+          </tr>
+          <tr>
+            <td><strong>سندرم چرگ اشتراوس (EGPA)</strong></td>
+            <td>کورتیکواستروئیدهای سیستمیک دوز بالا (پاسخ بسیار سریع ائوزینوفیل‌ها)</td>
+            <td>سیکلوفسفامید در درگیری قلبی/عصبی، مپولیزوماب (Anti-IL-5)، ریتوکسی‌ماب و آزاتیوپرین</td>
+            <td>شمارش ائوزینوفیل‌های مطلق، اکوکاردیوگرافی و تروپونین (میوکاردیت)، پایش آسم و وضعیت نوروپاتی</td>
+          </tr>
+          <tr>
+            <td><strong>کرایوگلوبولینمی و HCV</strong></td>
+            <td>مهار التهاب با کورتون و ریتوکسی‌ماب در فاز وازونکروز حاد؛ همراه با پلاسمافرز</td>
+            <td><strong>داروهای ضد ویروسی اثر مستقیم (DAA) هپاتیت C</strong> نظیر سوفوسبوویر جهت ریشه‌کنی HCV</td>
+            <td>سنجش کرایوکریت در سرما، سطح کمپلمان C4، فاکتور روماتوئید (RF)، آنزیم‌های کبدی و کراتینین</td>
+          </tr>
+          <tr>
+            <td><strong>کاوازاکی در اطفال (KD)</strong></td>
+            <td><strong>ایمونوگلوبولین وریدی (IVIG) به میزان 2 g/kg تک‌دوز</strong> + آسپرین با دوز بالا (80-100 mg/kg/day)</td>
+            <td>کاهش دوز آسپرین به ۳ تا ۵ میلی‌گرم بر کیلوگرم؛ استروئیدها تنها در موارد مقاوم به دو دوز IVIG</td>
+            <td>اکوکاردیوگرافی اورژانس جهت رد آنوریسم شریان کرونر در زمان بستری، هفته ۲ و هفته ۶ تا ۸</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="infobox ib-red">
+      <span class="ib-icon">🚨</span>
+      <div>
+        <strong>هشدار اورژانس حیات‌بخش روماتولوژی (Diffuse Alveolar Hemorrhage):</strong>
+        در بیماران مبتلا به واسکولیت با تنگی نفس حاد، افت هموگلوبین، هموپتیزی و ارتشاح دوطرفه ریه، احتمال خونریزی منتشر آلوئولار وجود دارد. تأخیر چندساعته در تشخیص، مرگ حتمی ناشی از خفگی را رقم می‌زند. در این شرایط مشاوره فوق‌تخصصی فوری روماتولوژی، پالس کورتون با دوز ۱ گرم، پلاسمافرز و حفاظت راه هوایی نجات‌بخش خواهد بود.
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== FOOTER ===================== -->
+  <div class="footer">
+    درسنامه جامع روماتولوژی بالینی: بیماری‌های واسکولیت (Vasculitides)<br>
+    منطبق بر تدریس استاد گرامی <strong>دکتر اولیا </strong> و آخرین دستورالعمل‌های بین‌المللی ACR/EULAR<br>
+    طراحی شده توسط احمدرضا عبداللهی پور
+  </div>
+
+</div> <!-- END MAIN -->
+
+<!-- ===== نوار شناور ابزار چند پلتفرمی ===== -->
+<div id="highlight-panel">
+  <span>🖍️ ابزار مطالعه:</span>
+  <button class="hl-btn hl-btn-yellow" onclick="applyColorHighlight('#fff59d')" title="زرد"></button>
+  <button class="hl-btn hl-btn-green" onclick="applyColorHighlight('#c8e6c9')" title="سبز"></button>
+  <button class="hl-btn hl-btn-blue" onclick="applyColorHighlight('#bbdefb')" title="آبی"></button>
+  <button class="hl-btn hl-btn-pink" onclick="applyColorHighlight('#f8bbd0')" title="صورتی"></button>
+  <button class="panel-action-btn" onclick="addNoteAtSelection()">📝 یادداشت</button>
+  <button class="panel-action-btn" onclick="viewAllNotes()">🔍 لیست یادداشت‌ها</button>
+  <button class="panel-action-btn panel-action-btn-red" onclick="clearSelectedHighlight()">❌ پاک‌کردن</button>
+  <button class="panel-action-btn" style="background:#2e7d32;" onclick="exportModifiedHTML()">📥 خروجی گرفتن از فایل</button>
+</div>
+
+<!-- پنجره مودال ثبت/ویرایش یادداشت -->
+<div class="modal-overlay" id="note-edit-modal">
+  <div class="modal-card">
+    <h4 id="modal-title">ثبت یادداشت جدید در این محل</h4>
+    <textarea class="modal-textarea" id="modal-note-input" placeholder="نکته مهم کلاسی خود را جهت مرور سریع بنویسید..."></textarea>
+    <div class="modal-actions">
+      <button class="btn btn-primary" onclick="saveNoteChanges()">💾 ذخیره تغییرات</button>
+      <button class="btn btn-danger" id="btn-delete-note" onclick="deleteActiveNote()">❌ حذف یادداشت</button>
+      <button class="btn btn-secondary" onclick="closeNoteModal()">انصراف</button>
+    </div>
+  </div>
+</div>
+
+<!-- پنجره مودال لیست همه‌ی یادداشت‌ها -->
+<div class="modal-overlay" id="all-notes-modal">
+  <div class="modal-card" style="max-height: 80%; overflow-y: auto; max-width: 600px;">
+    <h4>📋 تمام یادداشت‌های ثبت‌شده شما</h4>
+    <div id="all-notes-list" style="margin-bottom: 20px;">
+      <!-- لیست پویا به صورت خودکار پر خواهد شد -->
+    </div>
+    <div class="modal-actions">
+      <button class="btn btn-secondary" onclick="closeAllNotesModal()">بستن پنجره</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== منبع کدهای جاوا اسکریپت تعاملی ===== -->
+<script>
+  const storageStateKey = "rheumatology_vasculitis_session1_interactive_state";
+  let savedRange = null; 
+  let activeMarker = null;
+
+  document.addEventListener("DOMContentLoaded", () => {
+    loadPageState();
+  });
+
+  function savePageState() {
+    const mainHTML = document.querySelector('.main').innerHTML;
+    localStorage.setItem(storageStateKey, mainHTML);
+  }
+
+  function loadPageState() {
+    const savedHTML = localStorage.getItem(storageStateKey);
+    if (savedHTML) {
+      document.querySelector('.main').innerHTML = savedHTML;
+    }
+  }
+
+  function applyColorHighlight(colorHex) {
+    const selection = window.getSelection();
+    if (!selection.rangeCount || selection.isCollapsed) {
+      alert("لطفاً ابتدا متنی از جزوه را با ماوس یا لمس طولانی انتخاب کنید.");
+      return;
+    }
+
+    const main = document.querySelector('.main');
+    const originalEditable = main.contentEditable;
+    
+    main.contentEditable = "true";
+    
+    try {
+      document.execCommand("styleWithCSS", false, true);
+      document.execCommand("backColor", false, colorHex);
+    } catch (e) {
+      console.error("خطای هایلایت:", e);
+    }
+    
+    main.contentEditable = originalEditable;
+    selection.removeAllRanges();
+    savePageState();
+  }
+
+  function clearSelectedHighlight() {
+    applyColorHighlight('transparent');
+  }
+
+  function addNoteAtSelection() {
+    const selection = window.getSelection();
+    if (!selection.rangeCount || selection.isCollapsed) {
+      alert("لطفاً ابتدا بخشی از متن را با کشیدن انگشت یا ماوس انتخاب کنید تا یادداشت به آنجا متصل شود.");
+      return;
+    }
+
+    savedRange = selection.getRangeAt(0).cloneRange();
+    
+    activeMarker = null; 
+    document.getElementById("modal-title").innerText = "ثبت یادداشت جدید در این محل";
+    document.getElementById("modal-note-input").value = "";
+    document.getElementById("btn-delete-note").style.display = "none";
+    document.getElementById("note-edit-modal").style.display = "flex";
+  }
+
+  function saveNoteChanges() {
+    const text = document.getElementById("modal-note-input").value.trim();
+    if (!text) {
+      alert("لطفاً متن یادداشت را وارد کنید.");
+      return;
+    }
+
+    if (activeMarker === null) {
+      if (savedRange) {
+        const marker = document.createElement("span");
+        marker.className = "note-marker";
+        marker.setAttribute("data-note", text);
+        marker.innerHTML = `📝<span class="note-tooltip">${escapeHTML(text)}</span>`;
+        marker.contentEditable = "false";
+        
+        try {
+          savedRange.collapse(false);
+          savedRange.insertNode(marker);
+        } catch (e) {
+          console.error("Error inserting marker:", e);
+          alert("امکان درج یادداشت در این بخش به دلیل تداخل تگ‌ها وجود ندارد. لطفا متن ساده‌تری را انتخاب کنید.");
+        }
+        savedRange = null;
+      } else {
+        alert("محدوده متن انتخاب شده معتبر نیست. لطفاً مجدداً متن را انتخاب کنید.");
+        return;
+      }
+    } else {
+      activeMarker.setAttribute("data-note", text);
+      activeMarker.innerHTML = `📝<span class="note-tooltip">${escapeHTML(text)}</span>`;
+    }
+
+    closeNoteModal();
+    savePageState();
+  }
+
+  function deleteActiveNote() {
+    if (activeMarker && confirm("آیا مایل به حذف این یادداشت هستید؟")) {
+      activeMarker.remove();
+      closeNoteModal();
+      savePageState();
+    }
+  }
+
+  function closeNoteModal() {
+    document.getElementById("note-edit-modal").style.display = "none";
+    activeMarker = null;
+    savedRange = null;
+  }
+
+  document.addEventListener("click", (e) => {
+    const marker = e.target.closest(".note-marker");
+    if (marker) {
+      activeMarker = marker;
+      const savedText = activeMarker.getAttribute("data-note") || "";
+      document.getElementById("modal-title").innerText = "مشاهده و ویرایش یادداشت";
+      document.getElementById("modal-note-input").value = savedText;
+      document.getElementById("btn-delete-note").style.display = "inline-block";
+      document.getElementById("note-edit-modal").style.display = "flex";
+    }
+  });
+
+  function viewAllNotes() {
+    const markers = document.querySelectorAll(".note-marker");
+    const listContainer = document.getElementById("all-notes-list");
+    listContainer.innerHTML = "";
+
+    if (markers.length === 0) {
+      listContainer.innerHTML = '<p style="text-align:center; color:var(--muted); font-size:14px; padding:20px 0;">هیچ یادداشتی در کل متن ثبت نشده است.</p>';
+      document.getElementById("all-notes-modal").style.display = "flex";
+      return;
+    }
+
+    markers.forEach((marker, index) => {
+      const noteText = marker.getAttribute("data-note") || "";
+      const context = marker.previousSibling ? marker.previousSibling.textContent.slice(-35) : "...";
+      
+      const card = document.createElement("div");
+      card.className = "mini-card mc-blue";
+      card.style.marginBottom = "12px";
+      card.innerHTML = `
+        <div style="font-size:11px; color:var(--muted); margin-bottom:5px;">یادداشت شماره ${index + 1} (متن مجاور: "...${escapeHTML(context)}")</div>
+        <div style="font-weight:bold; font-size:14px; line-height:1.6; white-space:pre-wrap; color:var(--text);">${escapeHTML(noteText)}</div>
+        <div style="margin-top:10px; display:flex; gap:8px;">
+          <button onclick="scrollToMarker(${index})" class="tag tag-blue" style="border:none; cursor:pointer; padding:4px 10px;">🔍 پرش به محل یادداشت</button>
+          <button onclick="deleteMarkerFromList(${index})" class="tag tag-red" style="border:none; cursor:pointer; padding:4px 10px;">❌ حذف</button>
+        </div>
+      `;
+      listContainer.appendChild(card);
+    });
+
+    document.getElementById("all-notes-modal").style.display = "flex";
+  }
+
+  window.scrollToMarker = function(index) {
+    const markers = document.querySelectorAll(".note-marker");
+    if (markers[index]) {
+      closeAllNotesModal();
+      markers[index].scrollIntoView({ behavior: "smooth", block: "center" });
+      
+      const originalBg = markers[index].style.backgroundColor;
+      markers[index].style.backgroundColor = "#ff5252";
+      markers[index].style.transform = "scale(1.4)";
+      
+      setTimeout(() => {
+        markers[index].style.backgroundColor = originalBg;
+        markers[index].style.transform = "scale(1)";
+      }, 1500);
+    }
+  };
+
+  window.deleteMarkerFromList = function(index) {
+    if (confirm("آیا مایل به حذف این یادداشت هستید؟")) {
+      const markers = document.querySelectorAll(".note-marker");
+      if (markers[index]) {
+        markers[index].remove();
+        savePageState();
+        viewAllNotes(); 
+      }
+    }
+  };
+
+  function exportModifiedHTML() {
+    const docClone = document.cloneNode(true);
+    const currentMainHTML = document.querySelector('.main').innerHTML;
+    docClone.querySelector('.main').innerHTML = currentMainHTML;
+    
+    const htmlString = '<!DOCTYPE html>\n' + docClone.documentElement.outerHTML;
+    
+    const blob = new Blob([htmlString], { type: "text/html;charset=utf-8" });
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "rheumatology_vasculitis_session1_interactive_output.html";
+    link.click();
+  }
+
+  function closeAllNotesModal() {
+    document.getElementById("all-notes-modal").style.display = "none";
+  }
+
+  function escapeHTML(str) {
+    return str.replace(/[&<>'"]/g, 
+      tag => ({
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        "'": '&#39;',
+        '"': '&quot;'
+      }[tag] || tag)
+    );
+  }
+</script>
+
+</body>
+</html>
